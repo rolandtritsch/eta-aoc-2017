@@ -10,12 +10,13 @@ notifications:
 sudo: required
 
 before_install:
-  - bin/setup.sh
+  - curl -O https://cdnverify.eta-lang.org/eta-binaries/etlas-1.4.0.0/binaries/x86_64-linux/etlas
+  - chmod 700 etlas
 
 script:
   - java -version
-  - bin/etlas --version
-  - bin/etlas update
-  - bin/etlas select latest
-  - bin/etlas run eta-aoc-test
-  - bin/etlas run eta-aoc-exe
+  - ./etlas --version
+  - yes | ./etlas update
+  - ./etlas select latest
+  - ./etlas run eta-aoc-test
+  - ./etlas run eta-aoc-exe
