@@ -1,0 +1,21 @@
+language: java
+
+notifications:
+  email:
+    recipients:
+      - roland@tritsch.org
+    on_success: always
+    on_failure: always
+
+sudo: required
+
+before_install:
+  - bin/setup.sh
+
+script:
+  - java -version
+  - bin/etlas --version
+  - bin/etlas update
+  - bin/etlas select latest
+  - bin/etlas run eta-aoc-test
+  - bin/etlas run eta-aoc-exe
