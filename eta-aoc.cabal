@@ -25,12 +25,16 @@ library
       Day02
       Day02.Part1
       Day02.Part2
+      Day03
+      Day03.Part1
+      Day03.Part2
       Util
   hs-source-dirs:
       src
   build-depends:
       base >=4.8 && <4.9
     , split
+    , containers
   default-language: Haskell2010
 
 executable eta-aoc-exe
@@ -48,6 +52,7 @@ test-suite eta-aoc-test
   other-modules:
       Day01Spec
       Day02Spec
+      Day03Spec
   hs-source-dirs:
       test
   build-depends:

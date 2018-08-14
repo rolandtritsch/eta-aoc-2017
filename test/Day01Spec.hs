@@ -7,7 +7,7 @@ import Day01
 
 run :: IO ()
 run = hspec $ do
-  describe "solve - part1" $ do
+  describe "solve - Part1" $ do
     it "should return the right result(s) for the testcases" $ do
       Day01.captcha "1122" `shouldBe` 3
       Day01.captcha "1111" `shouldBe` 4
@@ -17,7 +17,7 @@ run = hspec $ do
     it "should solve the puzzle" $ do
       Day01.captcha Day01.input `shouldBe` 1223
 
-  describe "solve - part2" $ do
+  describe "solve - Part2" $ do
     it "should return the right result(s) for the testcases" $ do
       Day01.captcha' "1212" `shouldBe` 6
       Day01.captcha' "1221" `shouldBe` 0

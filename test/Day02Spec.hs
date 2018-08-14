@@ -15,13 +15,13 @@ run = hspec $ do
 
   describe "checksums" $ do
     it "should calc the correct checksum(s)" $ do
-      checksums [[10, 5], [100, 50]] `shouldBe` [5, 50]
-      checksums input `shouldBe` [1727,540,1014,1494,690,1833,1888,853,7608,2031,2799,2226,343,5238,4322,319]
+      P1.checksums [[10, 5], [100, 50]] `shouldBe` [5, 50]
+      P1.checksums input `shouldBe` [1727,540,1014,1494,690,1833,1888,853,7608,2031,2799,2226,343,5238,4322,319]
 
-  describe "solve - part1" $ do
+  describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
       P1.solve input `shouldBe` 34925
 
-  describe "solve - part2" $ do
+  describe "solve - Part2" $ do
     it "should solve the puzzle" $ do
       P2.solve input `shouldBe` 221
