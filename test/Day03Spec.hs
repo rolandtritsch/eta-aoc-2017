@@ -11,8 +11,7 @@ run :: IO ()
 run = hspec $ do
   describe "input" $ do
     it "should read the (raw) input" $ do
-      --input `shouldBe` 368078
-      input `shouldBe` 1024
+      input `shouldBe` 368078
 
   describe "moves" $ do
     it "should create the right moves" $ do
@@ -41,8 +40,7 @@ run = hspec $ do
       P1.solve 1024 `shouldBe` 31
 
     it "should solve the puzzle" $ do
-      --P1.solve input `shouldBe` 371
-      P1.solve input `shouldBe` 31
+      P1.solve input `shouldBe` 371
 
   describe "cells - Part2" $ do
     it "should create the right sequence of cells" $ do
@@ -62,5 +60,4 @@ run = hspec $ do
       P2.solve 747 `shouldBe` 806
 
     it "should solve the puzzle" $ do
-      --P2.solve input `shouldBe` 369601
-      P2.solve input `shouldBe` 1968
+      P2.solve input `shouldBe` 369601
