@@ -1,1 +1,1 @@
-etlas build --enable-test --enable-uberjar-mode && java -Xss1024M -jar dist/build/eta-0.8.0.2/eta-aoc-0.1.0.0/t/eta-aoc-test/build/eta-aoc-test/eta-aoc-test.jar && java -Xss1024M -jar dist/build/eta-0.8.0.2/eta-aoc-0.1.0.0/x/eta-aoc-exe/build/eta-aoc-exe/eta-aoc-exe.jar
+etlas build --enable-test --enable-uberjar-mode && java -Xss1024M -Xmx4096M -jar dist/build/eta-0.8.6.1/eta-aoc-0.1.0.0/t/eta-aoc-test/build/eta-aoc-test/eta-aoc-test.jar && java -Xss1024M -Xmx4096M -jar dist/build/eta-0.8.6.1/eta-aoc-0.1.0.0/x/eta-aoc-exe/build/eta-aoc-exe/eta-aoc-exe.jar

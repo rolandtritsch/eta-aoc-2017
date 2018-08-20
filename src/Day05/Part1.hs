@@ -3,6 +3,7 @@ module Day05.Part1 where
 
 import Day05
 
+-- | the offset for Part1
 offset :: Int -> Int
 offset counter = counter + 1
 

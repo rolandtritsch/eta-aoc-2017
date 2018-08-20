@@ -15,6 +15,9 @@ import qualified Day04.Part2 as D04P2
 import Day05
 import qualified Day05.Part1 as D05P1
 import qualified Day05.Part2 as D05P2
+import Day06
+import qualified Day06.Part1 as D06P1
+import qualified Day06.Part2 as D06P2
 
 main :: IO ()
 main = do
@@ -27,7 +30,9 @@ main = do
   printf "Day04: Part1: countvalid -> %d\n" (D04P1.solve Day04.input)
   printf "Day04: Part2: countvalid -> %d\n" (D04P2.solve Day04.input)
   printf "Day05: Part1: countsteps -> %d\n" (D05P1.solve Day05.input)
-  printf "Day05: Part2: countsteps -> %d\n" (D05P2.solve Day05.input)
+  --printf "Day05: Part2: countsteps -> %d\n" (D05P2.solve Day05.input)
+  printf "Day06: Part1: cycles -> %d\n" (D06P1.solve Day06.input)
+  printf "Day06: Part2: cycles -> %d\n" (D06P2.solve Day06.input)
 
 {--
     println(s"Day06: Part1: cycles -> ${Day06.Part1.solve(Day06.input)}")

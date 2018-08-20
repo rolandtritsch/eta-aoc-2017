@@ -10,7 +10,7 @@ notifications:
 sudo: required
 
 before_install:
-  - curl -O https://cdnverify.eta-lang.org/eta-binaries/etlas-1.4.0.0/binaries/x86_64-linux/etlas
+  - curl -O https://cdnverify.eta-lang.org/eta-binaries/etlas-1.5.0.0/binaries/x86_64-linux/etlas
   - chmod 700 etlas
 
 script:
@@ -19,5 +19,5 @@ script:
   - yes | ./etlas update
   - ./etlas select latest
   - ./etlas build --enable-test --enable-uberjar-mode
-  - java -Xss1024M -jar dist/build/eta-0.8.0.2/eta-aoc-0.1.0.0/t/eta-aoc-test/build/eta-aoc-test/eta-aoc-test.jar
-  - java -Xss1024M -jar dist/build/eta-0.8.0.2/eta-aoc-0.1.0.0/x/eta-aoc-exe/build/eta-aoc-exe/eta-aoc-exe.jar
+  - travis_wait 60 java -Xss1024M -Xmx4096M -jar dist/build/eta-0.8.6.1/eta-aoc-0.1.0.0/t/eta-aoc-test/build/eta-aoc-test/eta-aoc-test.jar
+  - travis_wait 60 java -Xss1024M -Xmx4096M -jar dist/build/eta-0.8.6.1/eta-aoc-0.1.0.0/x/eta-aoc-exe/build/eta-aoc-exe/eta-aoc-exe.jar
