@@ -29,7 +29,7 @@ main = do
   printf "Day03: Part2: number -> %d\n" (D03P2.solve Day03.input)
   printf "Day04: Part1: countvalid -> %d\n" (D04P1.solve Day04.input)
   printf "Day04: Part2: countvalid -> %d\n" (D04P2.solve Day04.input)
-  printf "Day05: Part1: countsteps -> %d\n" (D05P1.solve Day05.input)
+  --printf "Day05: Part1: countsteps -> %d\n" (D05P1.solve Day05.input)
   --printf "Day05: Part2: countsteps -> %d\n" (D05P2.solve Day05.input)
   printf "Day06: Part1: cycles -> %d\n" (D06P1.solve Day06.input)
   printf "Day06: Part2: cycles -> %d\n" (D06P2.solve Day06.input)
