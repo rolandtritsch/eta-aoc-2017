@@ -37,6 +37,9 @@ library
       Day06
       Day06.Part1
       Day06.Part2
+      Day07
+      Day07.Part1
+      Day07.Part2
       Util
   hs-source-dirs:
       src

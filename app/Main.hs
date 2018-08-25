@@ -18,6 +18,9 @@ import qualified Day05.Part2 as D05P2
 import Day06
 import qualified Day06.Part1 as D06P1
 import qualified Day06.Part2 as D06P2
+import Day07
+import qualified Day07.Part1 as D07P1
+import qualified Day07.Part2 as D07P2
 
 main :: IO ()
 main = do
@@ -33,12 +36,10 @@ main = do
   --printf "Day05: Part2: countsteps -> %d\n" (D05P2.solve Day05.input)
   printf "Day06: Part1: cycles -> %d\n" (D06P1.solve Day06.input)
   printf "Day06: Part2: cycles -> %d\n" (D06P2.solve Day06.input)
+  printf "Day07: Part1: findroot -> %s\n" (D07P1.solve Day07.input)
+  printf "Day07: Part2: correctweight -> %d\n" (D07P2.solve Day07.input)
 
 {--
-    println(s"Day06: Part1: cycles -> ${Day06.Part1.solve(Day06.input)}")
-    println(s"Day06: Part2: cycles -> ${Day06.Part2.solve(Day06.input)}")
-    println(s"Day07: Part1: findroot -> ${Day07.Part1.solve(Day07.input)}")
-    println(s"Day07: Part2: correctweight -> ${Day07.Part2.solve(Day07.input)}")
     println(s"Day08: Part1: maxregister -> ${Day08.Part1.solve(Day08.input)}")
     println(s"Day08: Part2: maxregisters -> ${Day08.Part2.solve(Day08.input)}")
     println(s"Day09: Part1: score -> ${Day09.Part1.solve(Day09.input)}")

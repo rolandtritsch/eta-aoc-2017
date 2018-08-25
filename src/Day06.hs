@@ -13,9 +13,6 @@ See also <https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_Tortoise_and_Har
 -}
 module Day06 where
 
-import Data.List (maximumBy)
-import Data.Ord (comparing)
-
 import Util (inputRaw)
 
 type MemoryBanks = [Int]
