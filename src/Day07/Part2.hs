@@ -5,4 +5,4 @@ import Day07
 
 -- | solve the puzzle.
 solve :: [ParseElement] -> Int
-solve input = 596
+solve input = correctWeight (findBadNode (build input Root (findRoot input)))
