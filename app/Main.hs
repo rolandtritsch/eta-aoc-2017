@@ -36,6 +36,7 @@ main = do
   --printf "Day05: Part2: countsteps -> %d\n" (D05P2.solve Day05.input)
   printf "Day06: Part1: cycles -> %d\n" (D06P1.solve Day06.input)
   printf "Day06: Part2: cycles -> %d\n" (D06P2.solve Day06.input)
+  --printf "Day07: tree -> %s\n" (Day07.drawWeightedTree Day07.input)
   printf "Day07: Part1: findroot -> %s\n" (D07P1.solve Day07.input)
   printf "Day07: Part2: correctweight -> %d\n" (D07P2.solve Day07.input)
 
