@@ -13,6 +13,10 @@ run = hspec $ do
     it "should read the (raw) input" $ do
       take 5 input `shouldBe` "{{{{{"
 
+  describe "transition" $ do
+    it "should be able to process the input" $ do
+      foldl transition (InGroup 0 0 0) input `shouldBe` (InGroup 0 10800 4522)
+
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
       P1.solve input `shouldBe` 10800

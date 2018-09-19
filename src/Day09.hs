@@ -24,3 +24,24 @@ import Util
 -- | read the input
 input :: String
 input = head $ inputRaw "input/Day09input.txt"
+
+-- | all of the states (according to the diagram)
+type Level = Int
+type Score = Int
+type NumOfChars = Int
+data State
+  = InGroup Level Score NumOfChars
+  | InGarbage Level Score NumOfChars
+  | InCanceled Level Score NumOfChars
+  deriving (Eq, Show)
+
+-- | transition to the next state (according to the diagram)
+transition :: State -> Char -> State
+transition (InGroup level score chars) '{' = InGroup (level + 1) score chars
+transition (InGroup level score chars) '}' = InGroup (level - 1) (score + level) chars
+transition (InGroup level score chars) '<' = InGarbage level score chars
+transition (InGroup level score chars) _ = InGroup level score chars
+transition (InGarbage level score chars) '>' = InGroup level score chars
+transition (InGarbage level score chars) '!' = InCanceled level score chars
+transition (InGarbage level score chars) _ = InGarbage level score (chars + 1)
+transition (InCanceled level score chars) _ = InGarbage level score chars

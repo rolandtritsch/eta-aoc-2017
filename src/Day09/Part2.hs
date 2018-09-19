@@ -5,4 +5,5 @@ import Day09
 
 -- | solve the puzzle
 solve :: String -> Int
-solve input = 4522
+solve input = chars $ foldl transition (InGroup 0 0 0) input where
+  chars (InGroup 0 _ cs) = cs
