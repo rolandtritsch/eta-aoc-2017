@@ -15,6 +15,7 @@ While I am running the state machine I am collecting stats that will allow
 me (at the end) to answer (the given) questions about the input stream.
 
 Part1 - Trivial. Collect and show the right stats.
+
 Part2 - Trivial. Collect and show the right stats.
 -}
 module Day09 where
