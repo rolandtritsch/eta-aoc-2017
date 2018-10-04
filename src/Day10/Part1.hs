@@ -5,4 +5,4 @@ import Day10
 
 -- | solve the puzzle
 solve :: String -> Int
-solve input = 4112
+solve input' = foldl (*) 1 $ take 2 $ hash $ knot (input2Lengths input') seed
