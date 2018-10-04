@@ -37,8 +37,11 @@ import Util (inputRaw)
 input :: Int
 input = read $ head $ inputRaw "input/Day03input.txt"
 
--- | possible moves (and their relative offset to the current position)
+-- | possible moves
 data Move = MoveUp | MoveDown | MoveLeft | MoveRight deriving (Show, Eq)
+
+-- | relative offset to the current position (for all moves)
+moveOffset :: (Num b, Num a) => Move -> (a, b)
 moveOffset MoveUp = (1, 0)
 moveOffset MoveDown = (-1, 0)
 moveOffset MoveLeft = (0, -1)
@@ -61,6 +64,7 @@ moves = [m | n <- [1..], m <- movesOnLevelN n]
 type Position = (Int, Int)
 
 -- | calc next position from current position and a moveOffset
+nextPosition :: (Num a, Num b) => (a, b) -> (a, b) -> (a, b)
 nextPosition (x, y) (xd, yd) = (x + xd, y + yd)
 
 -- | a cell has a value and a position

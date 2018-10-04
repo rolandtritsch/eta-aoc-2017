@@ -1,7 +1,7 @@
 -- Part2.hs
 module Day02.Part2 where
 
-import Day02
+-- import Day02
 
 -- | calculate the evenlyDivisible for every row
 evenlyDivisible :: [[Int]] -> [Int]
@@ -11,4 +11,4 @@ evenlyDivisible rows = map process rows where
 
 -- | solve the puzzle
 solve :: [[Int]] -> Int
-solve input = sum $ evenlyDivisible input
+solve rows = sum $ evenlyDivisible rows

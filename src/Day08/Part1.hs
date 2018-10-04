@@ -7,4 +7,4 @@ import Day08
 
 -- | solve the puzzle
 solve :: [Instruction] -> Int
-solve input = maximum $ M.elems $ foldl exec M.empty input
+solve instructions = maximum $ M.elems $ foldl exec M.empty instructions

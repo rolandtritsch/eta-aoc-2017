@@ -28,4 +28,4 @@ input = (map words) $ inputRaw "input/Day04input.txt"
 
 -- | count the valid passphrases
 countValid :: ([String] -> Bool) -> [[String]] -> Int
-countValid isValid input = length $ filter id $ map isValid input
+countValid isValid phrases = length $ filter id $ map isValid phrases

@@ -5,4 +5,4 @@ import Day07
 
 -- | solve the puzzle
 solve :: NodeMap -> String
-solve input = findRoot input
+solve nodes = findRoot nodes

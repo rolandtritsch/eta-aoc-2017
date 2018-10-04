@@ -7,13 +7,13 @@ import Day03
 cells :: [Move] -> [Cell]
 cells ms = centerCell : go centerCell ms where
   centerCell = Cell 1 (0, 0)
-  go previousCell [] = error "Opps. Moves is suppose to be infinite."
-  go previousCell (m:ms) = currentCell : go currentCell ms where
-    currentCell = Cell ((value previousCell) + 1) (nextPosition (position previousCell) (moveOffset m))
+  go _ [] = error "Opps. Moves is suppose to be infinite."
+  go previousCell (m':ms') = currentCell : go currentCell ms' where
+    currentCell = Cell ((value previousCell) + 1) (nextPosition (position previousCell) (moveOffset m'))
 
 -- | solve the puzzle. Input is the cell we are looking for.
 --
 -- Note: Input is based/centered on square 1. Stream is (obviously)
--- indexed/based on index 0. This is why we need to pass on input - 1.
+-- indexed/based on index 0. This is why we need to pass on target - 1.
 solve :: Int -> Int
-solve input = distance $ (cells moves) !! (input - 1)
+solve target = distance $ (cells moves) !! (target - 1)

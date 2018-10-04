@@ -41,18 +41,18 @@ cycle mbs = foldl redistribute (update mbi 0 mbs) [1..(maximum mbs)] where
 
 -- | floyd (see article above)
 floyd :: (MemoryBanks -> MemoryBanks) -> MemoryBanks -> (Int, Int)
-floyd cycle mbs = (lambda, mu) where
-  hare = phase1 (cycle mbs) (cycle (cycle mbs)) where
+floyd f mbs = (lambda', mu') where
+  hare' = phase1 (f mbs) (f (f mbs)) where
     phase1 tortoise hare
       | tortoise == hare = hare
-      | otherwise = phase1 (cycle tortoise) (cycle (cycle hare))
+      | otherwise = phase1 (f tortoise) (f (f hare))
 
-  (tortoise, mu) = phase2 mbs hare 0 where
+  (tortoise', mu') = phase2 mbs hare' 0 where
     phase2 tortoise hare mu
       | tortoise == hare = (tortoise, mu)
-      | otherwise = phase2 (cycle tortoise) (cycle hare) (mu + 1)
+      | otherwise = phase2 (f tortoise) (f hare) (mu + 1)
 
-  lambda = phase3 tortoise (cycle tortoise) 1 where
+  lambda' = phase3 tortoise' (f tortoise') 1 where
     phase3 tortoise hare lambda
       | tortoise == hare = lambda
-      | otherwise = phase3 tortoise (cycle hare) (lambda + 1)
+      | otherwise = phase3 tortoise (f hare) (lambda + 1)

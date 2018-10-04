@@ -22,27 +22,37 @@ module Day09 where
 
 import Util
 
--- | read the input
-input :: String
+type Event = Char
+
+-- | read the input (as a stream of chars/events)
+input :: [Event]
 input = head $ inputRaw "input/Day09input.txt"
 
--- | all of the states (according to the diagram)
+-- | define a simple finite state machine
+type FSM state event = state -> event -> IO state
+
+-- | all of the stats I want to collect, while processing the stream
+data Stats = Stats {
+  score :: Int,
+  numOfChars :: Int
+  } deriving (Eq, Show)
+
 type Level = Int
-type Score = Int
-type NumOfChars = Int
+
+-- | all of the states (according to the diagram)
 data State
-  = InGroup Level Score NumOfChars
-  | InGarbage Level Score NumOfChars
-  | InCanceled Level Score NumOfChars
+  = InGroup Level Stats
+  | InGarbage Level Stats
+  | InCanceled Level Stats
   deriving (Eq, Show)
 
--- | transition to the next state (according to the diagram)
-transition :: State -> Char -> State
-transition (InGroup level score chars) '{' = InGroup (level + 1) score chars
-transition (InGroup level score chars) '}' = InGroup (level - 1) (score + level) chars
-transition (InGroup level score chars) '<' = InGarbage level score chars
-transition (InGroup level score chars) _ = InGroup level score chars
-transition (InGarbage level score chars) '>' = InGroup level score chars
-transition (InGarbage level score chars) '!' = InCanceled level score chars
-transition (InGarbage level score chars) _ = InGarbage level score (chars + 1)
-transition (InCanceled level score chars) _ = InGarbage level score chars
+-- | process a given event/char
+processEvent :: FSM State Event
+processEvent (InGroup level stats) '{' = return (InGroup (level + 1) stats)
+processEvent (InGroup level (Stats score' chars)) '}' = return (InGroup (level - 1) (Stats (score' + level) chars))
+processEvent (InGroup level stats) '<' = return (InGarbage level stats)
+processEvent (InGroup level stats) _ = return (InGroup level stats)
+processEvent (InGarbage level stats) '>' = return (InGroup level stats)
+processEvent (InGarbage level stats) '!' = return (InCanceled level stats)
+processEvent (InGarbage level (Stats score' chars)) _ = return (InGarbage level (Stats score' (chars + 1)))
+processEvent (InCanceled level stats) _ = return (InGarbage level stats)

@@ -37,13 +37,13 @@ input = M.fromList $ map parser $ inputRaw "input/Day07input.txt" where
   parser line
     | isNode line = parseNode line
     | otherwise = parseLeaf line where
-      isNode line = isInfixOf "->" line
-      parseNode line = ((tokens !! 0), ((read $ tokens !! 1), (drop 2 tokens))) where
+      isNode line' = isInfixOf "->" line'
+      parseNode line' = ((tokens !! 0), ((read $ tokens !! 1), (drop 2 tokens))) where
         -- kozpul (59) -> shavjjt, anujsv, tnzvo
-        tokens = filter ((/=) "") $ splitOneOf "(),-> " line
-      parseLeaf line = ((tokens !! 0), ((read $ tokens !! 1), [])) where
+        tokens = filter ((/=) "") $ splitOneOf "(),-> " line'
+      parseLeaf line' = ((tokens !! 0), ((read $ tokens !! 1), [])) where
         -- occxa (60)
-        tokens = filter ((/=) "") $ splitOneOf "() " line
+        tokens = filter ((/=) "") $ splitOneOf "() " line'
 
 -- | find the root element
 findRoot :: NodeMap -> NodeName
@@ -58,7 +58,7 @@ build allNodes root = unfoldTree buildNode root where
 
 -- | draw a/the tree. Just for fun
 drawWeightedTree :: NodeMap -> String
-drawWeightedTree input = drawTree $ fmap show $ build input (findRoot input)
+drawWeightedTree nodes = drawTree $ fmap show $ build nodes $ findRoot nodes
 
 -- | calc the weight of a given element (by suming up the weight of the subtree)
 calcWeight :: Tree Int -> Int

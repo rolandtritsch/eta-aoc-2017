@@ -12,4 +12,4 @@ isValid phrase = repeated phrase == []
 -- | solve the puzzle. Input is a list of passphrases (every passphrase
 -- is a list of words). Return the number of valid passphrases.
 solve :: [[String]] -> Int
-solve input = countValid isValid input
+solve phrases = countValid isValid phrases

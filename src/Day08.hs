@@ -16,7 +16,6 @@ Part2 - Simple. The max of all register values in all collected register states/
 module Day08 where
 
 import Data.List.Split (splitOneOf)
-import Data.Maybe (fromJust)
 
 import qualified Data.Map as M
 

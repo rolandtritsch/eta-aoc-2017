@@ -31,9 +31,10 @@ input = head $ inputRaw "input/Day01input.txt"
 -- * add up all windows where the elements are the same (recursively)
 captcha :: String -> Int
 captcha s = go (prep s) where
-  prep s = digits ++ [head digits] where
-    digits = map digitToInt s
-  go (d : []) = 0
+  prep s' = digits ++ [head digits] where
+    digits = map digitToInt s'
+  go [] = error "Impossible match"
+  go (_ : []) = 0
   go (d : ds)
     | d == (head ds) = d + go ds
     | otherwise = go ds
@@ -47,8 +48,8 @@ captcha s = go (prep s) where
 -- * go through the list (adding up list(n), if list(n) == list(n + offset))
 captcha' :: String -> Int
 captcha' s = go (prep s) (div (length s) 2) (length s - 1) where
-  prep s = digits ++ digits where
-    digits = map digitToInt s
+  prep s' = digits ++ digits where
+    digits = map digitToInt s'
   go _ _ (- 1) = 0
   go list offset n
     | list !! n == list !! (n + offset) = (list !! n) + go list offset (n - 1)

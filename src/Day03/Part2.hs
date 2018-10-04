@@ -23,13 +23,13 @@ nextValue (x, y) lm = foldl (\v p -> v + M.findWithDefault 0 p lm) 0 ps where
 cells :: [Move] -> [Cell]
 cells ms = centerCell : go centerCell ms (M.insert (0, 0) 1 M.empty) where
   centerCell = Cell 1 (0, 0)
-  go previousCell [] _ = error "Opps. Moves is suppose to be infinite."
-  go previousCell (m:ms) lm = currentCell : go currentCell ms (M.insert currentPosition currentValue lm) where
-    currentPosition = nextPosition (position previousCell) (moveOffset m)
+  go _ [] _ = error "Opps. Moves is suppose to be infinite."
+  go previousCell (m':ms') lm = currentCell : go currentCell ms' (M.insert currentPosition currentValue lm) where
+    currentPosition = nextPosition (position previousCell) (moveOffset m')
     currentValue = nextValue currentPosition lm
     currentCell = Cell currentValue currentPosition
 
 -- | solve the puzzle. Input is the cell value we are looking for.
 solve :: Int -> Int
-solve input = value $ fromJust $ find (\(Cell v _) -> v > input) $ (cells moves)
---solve input = value $ head $ filter (\(Cell v _) -> v > input) $ (cells moves)
+solve target = value $ fromJust $ find (\(Cell v _) -> v > target) $ (cells moves)
+--solve target = value $ head $ filter (\(Cell v _) -> v > target) $ (cells moves)

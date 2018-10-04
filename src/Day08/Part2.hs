@@ -7,6 +7,6 @@ import Day08
 
 -- | solve the puzzle
 solve :: [Instruction] -> Int
-solve input = fst $ foldl findMax (0, M.empty) input where
+solve instructions = fst $ foldl findMax (0, M.empty) instructions where
   findMax (m, rs) i = (max m (maximum $ M.elems $ rs'), rs') where
     rs' = exec rs i

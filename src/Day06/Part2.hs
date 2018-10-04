@@ -5,5 +5,5 @@ import Day06
 
 -- | solve the puzzle
 solve :: MemoryBanks -> Int
-solve input = lambda where
-  (lambda, _) = floyd Day06.cycle input
+solve banks = lambda where
+  (lambda, _) = floyd Day06.cycle banks

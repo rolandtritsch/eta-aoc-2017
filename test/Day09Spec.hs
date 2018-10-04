@@ -1,6 +1,9 @@
 -- Day09Spec.hs
 module Day09Spec where
 
+import Control.Monad (foldM)
+import System.IO.Unsafe (unsafePerformIO)
+
 import Test.Hspec
 
 import Day09
@@ -15,7 +18,7 @@ run = hspec $ do
 
   describe "transition" $ do
     it "should be able to process the input" $ do
-      foldl transition (InGroup 0 0 0) input `shouldBe` (InGroup 0 10800 4522)
+      unsafePerformIO (foldM processEvent (InGroup 0 (Stats 0 0)) input) `shouldBe` (InGroup 0 (Stats 10800 4522))
 
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
