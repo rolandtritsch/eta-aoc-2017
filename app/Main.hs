@@ -53,7 +53,7 @@ main = do
   printf "Day09: Part1: score -> %d\n" (D09P1.solve Day09.input)
   printf "Day09: Part2: chars -> %d\n" (D09P2.solve Day09.input)
   printf "Day10: Part1: knot -> %d\n" (D10P1.solve Day10.input)
-  printf "Day10: Part2: hash -> %s\n" (D10P2.solve Day10.input)
+  --printf "Day10: Part2: hash -> %s\n" (D10P2.solve Day10.input)
 {--
     println(s"Day11: Part1: steps -> ${Day11.Part1.solve(Day11.input)}")
     println(s"Day11: Part2: max -> ${Day11.Part2.solve(Day11.input)}")
