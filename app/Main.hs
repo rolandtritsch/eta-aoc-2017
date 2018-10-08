@@ -33,6 +33,9 @@ import qualified Day10.Part2 as D10P2
 import Day11
 import qualified Day11.Part1 as D11P1
 import qualified Day11.Part2 as D11P2
+import Day12
+import qualified Day12.Part1 as D12P1
+import qualified Day12.Part2 as D12P2
 
 main :: IO ()
 main = do
@@ -59,9 +62,9 @@ main = do
   --printf "Day10: Part2: hash -> %s\n" (D10P2.solve Day10.input)
   printf "Day11: Part1: steps -> %d\n" (D11P1.solve Day11.input)
   printf "Day11: Part2: max -> %d\n" (D11P2.solve Day11.input)
+  printf "Day12: Part1: programs -> %d\n" (D12P1.solve Day12.input)
+  printf "Day12: Part2: groups -> %d\n" (D12P2.solve Day12.input)
 {--
-    println(s"Day12: Part1: programs -> ${Day12.Part1.solve(Day12.input)}")
-    println(s"Day12: Part2: groups -> ${Day12.Part2.solve(Day12.input)}")
     println(s"Day13: Part1: score -> ${Day13.Part1.solve(Day13.input)}")
     println(s"Day13: Part2: pass -> ${Day13.Part2.solve(Day13.input)}")
     println(s"Day14: Part1: used -> ${Day14.Part1.solve(Day14.input)}")
