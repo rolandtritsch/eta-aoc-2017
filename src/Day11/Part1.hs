@@ -5,4 +5,5 @@ import Day11
 
 -- | solve the puzzle
 solve :: [Direction] -> Int
-solve _ = 810
+solve moves = distance centerTile finalTile where
+  (finalTile, _) = process moves

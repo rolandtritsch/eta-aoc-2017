@@ -5,4 +5,5 @@ import Day11
 
 -- | solve the puzzle
 solve :: [Direction] -> Int
-solve _ = 1567
+solve moves = maxDistance where
+  (_, maxDistance) = process moves
