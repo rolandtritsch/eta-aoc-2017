@@ -1,6 +1,8 @@
 -- Day12Spec.hs
 module Day12Spec where
 
+import qualified Data.Map.Strict as M
+
 import Test.Hspec
 
 import Day12
@@ -11,7 +13,7 @@ run :: IO ()
 run = hspec $ do
   describe "input" $ do
     it "should read the (raw) input" $ do
-      head input `shouldBe` "0 <-> 46, 1376"
+      input M.! 0 `shouldBe` [46, 1376]
 
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
