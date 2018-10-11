@@ -18,8 +18,46 @@ the delay until we can pass through the firewall undetected.
 -}
 module Day13 where
 
+import qualified Data.Map.Strict as M
+import Data.List.Split (splitOneOf)
+import Data.List (sort)
+
 import Util
 
+type Layers = M.Map Int Int
+type Firewall = [(Int, Int)]
+
 -- | read the input
-input :: [String]
-input = inputRaw "input/Day13input.txt"
+input :: Layers
+input = M.fromList $ map line $ inputRaw "input/Day13input.txt" where
+  line l = (depth, range) where
+    tokens = map read $ filter (not . null) $ splitOneOf " :" l
+    depth = head tokens
+    range = last tokens
+
+-- | build a/the firewall (with a delay (adding extra layers at the front of the
+-- firewall) to solve part 2)
+buildFirewall :: Layers -> Int -> Firewall
+buildFirewall layers delay = sort $ map buildLayer [0..(fst $ (M.findMax layers)) + delay] where
+  buildLayer depth = (depth, range) where
+    range = M.findWithDefault 0 (depth - delay) layers
+
+-- | find out, if we have detected a thread.
+-- Here we go: If the layer on the current depth has no range
+-- the packet can never be caught (the layer is not able to
+-- catch the packet, right). And if the range of the layer is
+-- 1 the packet will always be caught. Otherwise we just do the
+-- modolo operation, but ... we need to take into consideration
+-- that the scanner is moving down and then up again (this is why
+-- it is "*2".
+threadDetected :: Int -> Int -> Bool
+threadDetected _ 0 = True
+threadDetected _ 1 = False
+threadDetected depth range = depth `mod` ((range - 1) * 2) == 0
+
+-- | calculate the security score
+calcSecScore :: Firewall -> Int
+calcSecScore fw = foldl calcLayer 0 fw where
+  calcLayer secScore (depth, range)
+    | threadDetected depth range = secScore + depth * range
+    | otherwise = secScore
