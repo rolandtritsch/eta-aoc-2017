@@ -5,5 +5,4 @@ import Day14
 
 -- | solve the puzzle
 solve :: String -> Int
-solve key = (foldl countTrue 0 . buildGrid) key where
-  countTrue sumSoFar row = sumSoFar + (length . filter id) row
+solve key = (length . filter id . concat . buildGrid) key
