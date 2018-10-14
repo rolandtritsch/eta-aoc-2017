@@ -61,6 +61,9 @@ library
     Day14
     Day14.Part1
     Day14.Part2
+    Day15
+    Day15.Part1
+    Day15.Part2
     Util
   hs-source-dirs:
     src
