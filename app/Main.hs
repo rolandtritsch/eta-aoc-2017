@@ -80,8 +80,8 @@ main = do
   --printf "Day13: Part2: pass -> %d\n" (D13P2.solve D13.input)
   --printf "Day14: Part1: used -> %d\n" (D14P1.solve D14.input)
   --printf "Day14: Part2: regions -> %d\n" (D14P2.solve D14.input)
-  printf "Day15: Part1: count -> %d\n" (D15P1.solve)
-  printf "Day15: Part2: count -> %d\n" (D15P2.solve)
+  --printf "Day15: Part1: count -> %d\n" (D15P1.solve)
+  --printf "Day15: Part2: count -> %d\n" (D15P2.solve)
   printf "Day16: Part1: moves -> %s\n" (D16P1.solve D16.input)
   printf "Day16: Part2: dance -> %s\n" (D16P2.solve D16.input)
 {--

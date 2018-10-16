@@ -21,7 +21,7 @@ run = hspec $ do
       let pairs = zip as bs
       let matches = map (\(a, b) -> matching a b) pairs
       matches `shouldBe` [False,False,True,False,False]
-
+{-
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
       P1.solve `shouldBe` 594
@@ -29,3 +29,4 @@ run = hspec $ do
   describe "solve - Part2" $ do
     it "should solve the puzzle" $ do
       P2.solve `shouldBe` 328
+-}
