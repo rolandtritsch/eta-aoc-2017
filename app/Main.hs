@@ -77,8 +77,8 @@ main = do
   --printf "Day13: Part2: pass -> %d\n" (D13P2.solve Day13.input)
   --printf "Day14: Part1: used -> %d\n" (D14P1.solve Day14.input)
   --printf "Day14: Part2: regions -> %d\n" (D14P2.solve Day14.input)
-  printf "Day15: Part1: count -> %d\n" (D15P1.solve Day15.input)
-  printf "Day15: Part2: count -> %d\n" (D15P2.solve Day15.input)
+  printf "Day15: Part1: count -> %d\n" (D15P1.solve)
+  printf "Day15: Part2: count -> %d\n" (D15P2.solve)
 {--
     println(s"Day16: Part1: moves -> ${Day16.Part1.solve(Day16.input)}")
     println(s"Day16: Part2: dance -> ${Day16.Part2.solve(Day16.input)}")
