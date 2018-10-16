@@ -11,7 +11,28 @@ run :: IO ()
 run = hspec $ do
   describe "input" $ do
     it "should read the input" $ do
-      take 5 input `shouldBe` "x5/11"
+      head input `shouldBe` "x5/11"
+
+  describe "spin" $ do
+    it "should spin/swap the programs" $ do
+      spin 0 "abcde" `shouldBe` "abcde"
+      spin 1 "abcde" `shouldBe` "eabcd"
+      spin 3 "abcde" `shouldBe` "cdeab"
+      spin 5 "abcde" `shouldBe` "abcde"
+
+  describe "exchange" $ do
+    it "should exhange two programs" $ do
+      exchange 0 0 "abcde" `shouldBe` "abcde"
+      exchange 3 4 "abcde" `shouldBe` "abced"
+      exchange 0 4 "abcde" `shouldBe` "ebcda"
+      exchange 4 0 "abcde" `shouldBe` "ebcda"
+
+  describe "partner" $ do
+    it "should partner two programs" $ do
+      partner 'a' 'a' "abcde" `shouldBe` "abcde"
+      partner 'd' 'e' "abcde" `shouldBe` "abced"
+      partner 'a' 'e' "abcde" `shouldBe` "ebcda"
+      partner 'e' 'a' "abcde" `shouldBe` "ebcda"
 
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
