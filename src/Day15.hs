@@ -11,14 +11,15 @@ Part2 - solve the puzzle with a modolo of (4, 8) and a depth of 5 * 10e6.
 -}
 module Day15 where
 
+import Data.Int (Int64)
 import Data.Bits ((.&.))
 
 -- | generate an infinte list of elements (based on a/the generator config)
-generator :: (Int, Int, Int, Int) -> [Int]
+generator :: (Int64, Int64, Int64, Int64) -> [Int64]
 generator (start, factor, divider, multiple) = tail $ filter (criteria multiple) $ iterate next start where
   criteria multiple' value = (mod value multiple') == 0
   next previous = rem (previous * factor) divider
 
 -- | check, if the two numbers match (lower 16 bits are equal)
-matching :: Int -> Int -> Bool
+matching :: Int64 -> Int64 -> Bool
 matching a b = (a .&. 0xffff) == (b .&. 0xffff)
