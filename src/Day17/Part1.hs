@@ -1,8 +1,9 @@
 -- Part1.hs
 module Day17.Part1 where
 
---import Day17
+import Day17
 
 -- | solve the puzzle
 solve :: Int -> Int
-solve _ = 1311
+solve steps = buffer !! mod (position + 1) (length buffer)  where
+  (position, buffer) = stepAndInsert steps 2017
