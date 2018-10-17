@@ -51,6 +51,9 @@ import qualified Day16.Part2 as D16P2
 import qualified Day17 as D17
 import qualified Day17.Part1 as D17P1
 import qualified Day17.Part2 as D17P2
+import qualified Day18 as D18
+import qualified Day18.Part1 as D18P1
+import qualified Day18.Part2 as D18P2
 
 main :: IO ()
 main = do
@@ -89,9 +92,9 @@ main = do
   printf "Day16: Part2: dance -> %s\n" (D16P2.solve D16.input)
   printf "Day17: Part1: next -> %d\n" (D17P1.solve D17.input)
   printf "Day17: Part2: zero -> %d\n" (D17P2.solve D17.input)
+  printf "Day18: Part1: frequency -> %d\n" (D18P1.solve D18.input)
+  printf "Day18: Part2: deadlock -> %d\n" (D18P2.solve D18.input)
 {--
-    println(s"Day18: Part1: frequency -> ${Day18.Part1.solve(Day18.input)}")
-    println(s"Day18: Part2: deadlock -> ${Day18.Part2.solve(Day18.input)}")
     println(s"Day19: Part1: path -> ${Day19.Part1.solve(Day19.input)}")
     println(s"Day19: Part2: steps -> ${Day19.Part2.solve(Day19.input)}")
     println(s"Day20: Part1: findclosest -> ${Day20.Part1.solve(Day20.input)}")
