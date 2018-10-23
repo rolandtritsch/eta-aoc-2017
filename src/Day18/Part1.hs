@@ -6,5 +6,5 @@ import qualified Data.Map.Strict as M
 import Day18
 
 -- | solve the puzzle
-solve :: [String] -> Int
-solve input' = (run (0, M.empty, False, 0) . instructions) input'
+solve :: [Assembler] -> Int
+solve program = (run (Running 0 M.empty) . instructions) program
