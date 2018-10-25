@@ -36,16 +36,16 @@ type Assembler = String
 
 data Value
   = Register Char
-  | RegisterValue Int
+  | RegisterValue Integer
 
-type Registers = M.Map Char Int
+type Registers = M.Map Char Integer
 
-type Counter = Int
+type Counter = Integer
 
 -- | the program state
 data State
   = Running Counter Registers
-  | Done Int
+  | Done Integer
 
 type Instruction = State -> State
 
@@ -130,7 +130,7 @@ instructions input' = map (instruction . words) input' where
   instruction _ = error "Unknown instruction"
 
  -- | run the instructions (until we are done)
-run :: State -> [Instruction] -> Int
+run :: State -> [Instruction] -> Integer
 run (Done exit) _ = exit
 run currentState@(Running pc  _) program = run nextState program where
-  nextState = (program !! pc) currentState
+  nextState = (program !! (fromInteger pc)) currentState
