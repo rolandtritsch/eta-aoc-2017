@@ -143,8 +143,8 @@ main = do
 
   (d17p1t, d17p1r) <- timeItT $ evaluate (D17P1.solve D17.input)
   printf "Day17: Part1: next -> (%f, %d)\n" d17p1t d17p1r
-  (d17p2t, d17p2r) <- timeItT $ evaluate (D17P2.solve D17.input)
-  printf "Day17: Part2: zero -> (%f, %d)\n" d17p2t d17p2r
+  --(d17p2t, d17p2r) <- timeItT $ evaluate (D17P2.solve D17.input)
+  --printf "Day17: Part2: zero -> (%f, %d)\n" d17p2t d17p2r
 
   (d18p1t, d18p1r) <- timeItT $ evaluate (D18P1.solve D18.input)
   printf "Day18: Part1: frequency -> (%f, %d)\n" d18p1t d18p1r
