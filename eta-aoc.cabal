@@ -114,6 +114,462 @@ executable eta-aoc-day01p1
   default-language:
     Haskell2010
 
+executable eta-aoc-day01p2
+  main-is:
+    src/Day01/Part2.hs
+  ghc-options:
+    -main-is Day01.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day02p1
+  main-is:
+    src/Day02/Part1.hs
+  ghc-options:
+    -main-is Day02.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day02p2
+  main-is:
+    src/Day02/Part2.hs
+  ghc-options:
+    -main-is Day02.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day03p1
+  main-is:
+    src/Day03/Part1.hs
+  ghc-options:
+    -main-is Day03.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day03p2
+  main-is:
+    src/Day03/Part2.hs
+  ghc-options:
+    -main-is Day03.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day04p1
+  main-is:
+    src/Day04/Part1.hs
+  ghc-options:
+    -main-is Day04.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day04p2
+  main-is:
+    src/Day04/Part2.hs
+  ghc-options:
+    -main-is Day04.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day05p1
+  main-is:
+    src/Day05/Part1.hs
+  ghc-options:
+    -main-is Day05.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day05p2
+  main-is:
+    src/Day05/Part2.hs
+  ghc-options:
+    -main-is Day05.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day06p1
+  main-is:
+    src/Day06/Part1.hs
+  ghc-options:
+    -main-is Day06.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day06p2
+  main-is:
+    src/Day06/Part2.hs
+  ghc-options:
+    -main-is Day06.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day07p1
+  main-is:
+    src/Day07/Part1.hs
+  ghc-options:
+    -main-is Day07.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day07p2
+  main-is:
+    src/Day07/Part2.hs
+  ghc-options:
+    -main-is Day07.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day08p1
+  main-is:
+    src/Day08/Part1.hs
+  ghc-options:
+    -main-is Day08.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day08p2
+  main-is:
+    src/Day08/Part2.hs
+  ghc-options:
+    -main-is Day08.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day09p1
+  main-is:
+    src/Day09/Part1.hs
+  ghc-options:
+    -main-is Day09.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day09p2
+  main-is:
+    src/Day09/Part2.hs
+  ghc-options:
+    -main-is Day09.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day10p1
+  main-is:
+    src/Day10/Part1.hs
+  ghc-options:
+    -main-is Day10.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day10p2
+  main-is:
+    src/Day10/Part2.hs
+  ghc-options:
+    -main-is Day10.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day11p1
+  main-is:
+    src/Day11/Part1.hs
+  ghc-options:
+    -main-is Day11.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day11p2
+  main-is:
+    src/Day11/Part2.hs
+  ghc-options:
+    -main-is Day11.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day12p1
+  main-is:
+    src/Day12/Part1.hs
+  ghc-options:
+    -main-is Day12.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day12p2
+  main-is:
+    src/Day12/Part2.hs
+  ghc-options:
+    -main-is Day12.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day13p1
+  main-is:
+    src/Day13/Part1.hs
+  ghc-options:
+    -main-is Day13.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day13p2
+  main-is:
+    src/Day13/Part2.hs
+  ghc-options:
+    -main-is Day13.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day14p1
+  main-is:
+    src/Day14/Part1.hs
+  ghc-options:
+    -main-is Day14.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day14p2
+  main-is:
+    src/Day14/Part2.hs
+  ghc-options:
+    -main-is Day14.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day15p1
+  main-is:
+    src/Day15/Part1.hs
+  ghc-options:
+    -main-is Day15.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day15p2
+  main-is:
+    src/Day15/Part2.hs
+  ghc-options:
+    -main-is Day15.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day16p1
+  main-is:
+    src/Day16/Part1.hs
+  ghc-options:
+    -main-is Day16.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day16p2
+  main-is:
+    src/Day16/Part2.hs
+  ghc-options:
+    -main-is Day16.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day17p1
+  main-is:
+    src/Day17/Part1.hs
+  ghc-options:
+    -main-is Day17.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day17p2
+  main-is:
+    src/Day17/Part2.hs
+  ghc-options:
+    -main-is Day17.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day18p1
+  main-is:
+    src/Day18/Part1.hs
+  ghc-options:
+    -main-is Day18.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day18p2
+  main-is:
+    src/Day18/Part2.hs
+  ghc-options:
+    -main-is Day18.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+
 test-suite eta-aoc-test
   type:
     exitcode-stdio-1.0
@@ -159,6 +615,312 @@ test-suite eta-aoc-test-day01
     test
   ghc-options:
     -main-is Day01Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day02
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day02Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day02Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day03
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day03Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day03Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day04
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day04Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day04Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day05
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day05Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day05Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day06
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day06Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day06Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day07
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day07Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day07Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day08
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day08Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day08Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day09
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day09Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day09Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day10
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day10Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day10Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day11
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day11Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day11Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day12
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day12Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day12Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day13
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day13Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day13Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day14
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day14Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day14Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day15
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day15Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day15Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day16
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day16Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day16Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day17
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day17Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day17Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day18
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day18Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day18Spec.run
   build-depends:
     base >=4.8 && <4.12
     , containers
