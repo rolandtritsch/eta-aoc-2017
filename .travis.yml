@@ -23,3 +23,8 @@ before_install:
 
 script:
   - ./bin/run.sh
+
+env:
+  - DAY=01 PART=1 TYPE=EXE
+  - DAY=01 PART=1 TYPE=TEST
+  - DAY=01 PART=2 TYPE=TEST
