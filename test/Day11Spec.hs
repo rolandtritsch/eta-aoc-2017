@@ -1,4 +1,3 @@
--- Day11Spec.hs
 module Day11Spec where
 
 import Test.Hspec

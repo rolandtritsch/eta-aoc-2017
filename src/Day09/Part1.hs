@@ -1,8 +1,10 @@
--- Part1.hs
 module Day09.Part1 where
 
-import Control.Monad (foldM)
 import Text.Printf (printf)
+import System.TimeIt (timeItT)
+import Control.Exception.Base (evaluate)
+
+import Control.Monad (foldM)
 import System.IO.Unsafe (unsafePerformIO)
 
 import Day09
@@ -25,3 +27,9 @@ solve' :: String -> Int
 solve' events = getScore $ unsafePerformIO $ foldM (withLogging processEvent) (InGroup 0 (Stats 0 0)) events where
   getScore (InGroup 0 s) = score s
   getScore _ = error "Unexpected match"
+
+-- | main
+main :: IO ()
+main = do
+  (time, result) <- timeItT $ evaluate (solve input)
+  printf "Day09: Part1: score -> (%f, %d)\n" time result

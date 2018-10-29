@@ -1,4 +1,3 @@
--- Day05Spec.hs
 module Day05Spec where
 
 import Test.Hspec
@@ -13,7 +12,6 @@ run = hspec $ do
     it "should read the (raw) input" $ do
       (take 10 $ input) `shouldBe` [0, 1, 0, 0, 1, -3, 0, 0, 2, -2]
 
-{-- these tests are VERY slow
   describe "solve - Part1" $ do
     it "should solve the testcases" $ do
       P1.solve [0, 3, 0, 1, -3] `shouldBe` 5
@@ -24,4 +22,3 @@ run = hspec $ do
   describe "solve - Part2" $ do
     it "should solve the puzzle" $ do
       P2.solve input `shouldBe` 29629538
---}

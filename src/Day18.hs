@@ -103,10 +103,6 @@ jgz' r (Register roffset) (Running pc rs)
   | otherwise = Running (pc + 1) rs
 jgz' _ _ (Done _) = error "Unknown state"
 
--- | check, if the given argument is a register
-isRegister :: String -> Bool
-isRegister argument = elem (argument !! 0) ['a'..'z']
-
 -- | get the register from the argument
 getRegister :: String -> Char
 getRegister argument = argument !! 0
@@ -114,12 +110,15 @@ getRegister argument = argument !! 0
 -- | build a value from the argument
 buildValue :: String -> Value
 buildValue argument
-  | isRegister argument = Register (getRegister argument)
+  | isRegister = Register (getRegister argument)
   | otherwise = RegisterValue (read argument)
+  where
+    isRegister = elem (argument !! 0) ['a'..'z']
 
 -- | build a/the program (a/the list of instructions) from the input
 instructions :: [Assembler] -> [Instruction]
-instructions input' = map (instruction . words) input' where
+instructions input' = map (instruction . tokenize) input' where
+  tokenize = words
   instruction ("snd":arguments) = snd' (getRegister (arguments !! 0))
   instruction ("set":arguments) = set' (getRegister (arguments !! 0)) (buildValue (arguments !! 1))
   instruction ("add":arguments) = add' (getRegister (arguments !! 0)) (buildValue (arguments !! 1))

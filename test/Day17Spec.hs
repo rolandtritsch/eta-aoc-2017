@@ -1,4 +1,3 @@
--- Day17Spec.hs
 module Day17Spec where
 
 import Test.Hspec
@@ -23,15 +22,14 @@ run = hspec $ do
 
   describe "insertAt" $ do
     it "should insert value at/after position" $ do
-      insertAt 1 0 [0] `shouldBe` [0,1]
-      insertAt 2 0 [0,1] `shouldBe` [0,2,1]
-      insertAt 2 1 [0,1] `shouldBe` [0,1,2]
+      insertAt 1 0 [0] `shouldBe` [0 :: Int,1]
+      insertAt 2 0 [0,1] `shouldBe` [0 :: Int,2,1]
+      insertAt 2 1 [0,1] `shouldBe` [0 :: Int,1,2]
 
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
       P1.solve input `shouldBe` 1311
-{-
+
   describe "solve - Part2" $ do
     it "should solve the puzzle" $ do
       P2.solve input `shouldBe` 39170601
--}

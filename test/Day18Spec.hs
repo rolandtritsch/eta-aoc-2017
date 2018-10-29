@@ -1,9 +1,8 @@
--- Day18Spec.hs
 module Day18Spec where
 
 import Test.Hspec
 
-import Day18
+import Day18 hiding (run)
 import qualified Day18.Part1 as P1
 import qualified Day18.Part2 as P2
 

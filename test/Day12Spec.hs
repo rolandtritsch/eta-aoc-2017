@@ -1,4 +1,3 @@
--- Day12Spec.hs
 module Day12Spec where
 
 import qualified Data.Map.Strict as M

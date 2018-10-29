@@ -1,4 +1,3 @@
--- Part2.hs
 module Day03.Part2 where
 
 import Data.Map (Map)
@@ -6,6 +5,10 @@ import qualified Data.Map as M
 
 import Data.List (find)
 import Data.Maybe (fromJust)
+
+import Text.Printf (printf)
+import System.TimeIt (timeItT)
+import Control.Exception.Base (evaluate)
 
 import Day03
 
@@ -33,3 +36,9 @@ cells ms = centerCell : go centerCell ms (M.insert (0, 0) 1 M.empty) where
 solve :: Int -> Int
 solve target = value $ fromJust $ find (\(Cell v _) -> v > target) $ (cells moves)
 --solve target = value $ head $ filter (\(Cell v _) -> v > target) $ (cells moves)
+
+-- | main
+main :: IO ()
+main = do
+  (time, result) <- timeItT $ evaluate (solve input)
+  printf "Day03: Part2: number -> (%f, %d)\n" time result

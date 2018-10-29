@@ -1,4 +1,3 @@
--- Day09Spec.hs
 module Day09Spec where
 
 import Control.Monad (foldM)

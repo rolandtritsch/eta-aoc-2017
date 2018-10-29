@@ -1,4 +1,3 @@
--- Day13Spec.hs
 module Day13Spec where
 
 import qualified Data.Map.Strict as M
@@ -30,8 +29,7 @@ run = hspec $ do
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
       P1.solve input `shouldBe` 1632
-{-
+
   describe "solve - Part2" $ do
     it "should solve the puzzle" $ do
       P2.solve input `shouldBe` 3834136
--}

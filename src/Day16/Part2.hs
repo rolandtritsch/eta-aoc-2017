@@ -1,5 +1,8 @@
--- Part2.hs
 module Day16.Part2 where
+
+import Text.Printf (printf)
+import System.TimeIt (timeItT)
+import Control.Exception.Base (evaluate)
 
 import Day16
 import qualified Day16.Part1 as P1
@@ -15,3 +18,9 @@ findLoop :: [String] -> String -> String -> Int -> Int
 findLoop input'' inital current times
   | inital == current = times
   | otherwise = findLoop input'' inital (P1.solve' input'' current) (times + 1)
+
+-- | main
+main :: IO ()
+main = do
+  (time, result) <- timeItT $ evaluate (solve input)
+  printf "Day16: Part2: dance -> (%f, %s)\n" time result

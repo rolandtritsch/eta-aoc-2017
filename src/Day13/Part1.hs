@@ -1,8 +1,17 @@
--- Part1.hs
 module Day13.Part1 where
+
+import Text.Printf (printf)
+import System.TimeIt (timeItT)
+import Control.Exception.Base (evaluate)
 
 import Day13
 
 -- | solve the puzzle
 solve :: Layers -> Int
 solve layers = calcSecScore $ buildFirewall layers 0
+
+-- | main
+main :: IO ()
+main = do
+  (time, result) <- timeItT $ evaluate (solve input)
+  printf "Day13: Part1: score -> (%f, %d)\n" time result

@@ -1,5 +1,8 @@
--- Part1.hs
 module Day03.Part1 where
+
+import Text.Printf (printf)
+import System.TimeIt (timeItT)
+import Control.Exception.Base (evaluate)
 
 import Day03
 
@@ -17,3 +20,9 @@ cells ms = centerCell : go centerCell ms where
 -- indexed/based on index 0. This is why we need to pass on target - 1.
 solve :: Int -> Int
 solve target = distance $ (cells moves) !! (target - 1)
+
+-- | main
+main :: IO ()
+main = do
+  (time, result) <- timeItT $ evaluate (solve input)
+  printf "Day03: Part1: distance -> (%f, %d)\n" time result

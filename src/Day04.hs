@@ -20,12 +20,18 @@ is a (stronger) superset of Policy1.
 -}
 module Day04 where
 
+import Data.List.Unique (repeated)
+
 import Util (inputRaw)
 
 -- | read the input
 input :: [[String]]
 input = (map words) $ inputRaw "input/Day04input.txt"
 
+-- | check, if a given passphrase is valid
+isValid :: [String] -> Bool
+isValid phrase = repeated phrase == []
+
 -- | count the valid passphrases
 countValid :: ([String] -> Bool) -> [[String]] -> Int
-countValid isValid phrases = length $ filter id $ map isValid phrases
+countValid isValid' phrases = length $ filter id $ map isValid' phrases
