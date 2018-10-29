@@ -18,9 +18,7 @@ cache:
 before_install:
   - curl -O https://cdnverify.eta-lang.org/eta-binaries/etlas-1.5.0.0/binaries/x86_64-linux/etlas
   - chmod 700 etlas
-  - mkdir ~/bin
   - mv etlas ~/bin
-  - export PATH=${PATH}:~/bin
   - yes | etlas update
   - etlas select latest
 
