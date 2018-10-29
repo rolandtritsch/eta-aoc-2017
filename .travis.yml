@@ -18,13 +18,14 @@ cache:
 before_install:
   - curl -O https://cdnverify.eta-lang.org/eta-binaries/etlas-1.5.0.0/binaries/x86_64-linux/etlas
   - chmod 700 etlas
-  - mv etlas bin
+  - mkdir ~/bin
+  - mv etlas ~/bin
   - export PATH=${PATH}:~/bin
   - yes | etlas update
   - etlas select latest
 
 script:
-  - travis_wait 60 run.sh
+  - travis_wait 60 ./bin/run.sh
 
 env:
   - DAY=01 PART=1 TYPE=EXE
