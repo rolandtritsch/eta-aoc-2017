@@ -22,7 +22,7 @@ before_install:
   - ./etlas select latest
 
 script:
-  - ./bin/run.sh
+  - travis_wait 60 ./bin/run.sh
 
 env:
   - DAY=01 PART=1 TYPE=EXE
