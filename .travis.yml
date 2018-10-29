@@ -9,15 +9,17 @@ notifications:
 
 sudo: required
 
+cache:
+  directories:
+    - ~/rolandtritsch/eta-aoc-2017/dist
+    - ~/.eta
+    - ~/.etlas
+
 before_install:
   - curl -O https://cdnverify.eta-lang.org/eta-binaries/etlas-1.5.0.0/binaries/x86_64-linux/etlas
   - chmod 700 etlas
-
-script:
-  - java -version
-  - ./etlas --version
   - yes | ./etlas update
   - ./etlas select latest
-  - ./etlas build --enable-test --enable-uberjar-mode
-  - travis_wait 60 java -Xss1024M -Xmx4096M -jar dist/build/eta-0.8.6.2/eta-aoc-0.1.0.0/t/eta-aoc-test/build/eta-aoc-test/eta-aoc-test.jar
-  - travis_wait 60 java -Xss1024M -Xmx4096M -jar dist/build/eta-0.8.6.2/eta-aoc-0.1.0.0/x/eta-aoc-exe/build/eta-aoc-exe/eta-aoc-exe.jar
+
+script:
+  - ./bin/run.sh
