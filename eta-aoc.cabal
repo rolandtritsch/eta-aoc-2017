@@ -76,6 +76,9 @@ library
     Day18
     Day18.Part1
     Day18.Part2
+    Day19
+    Day19.Part1
+    Day19.Part2
     Util
   hs-source-dirs:
     src
@@ -569,6 +572,31 @@ executable eta-aoc-day18p2
   default-language:
     Haskell2010
 
+executable eta-aoc-day19p1
+  main-is:
+    src/Day19/Part1.hs
+  ghc-options:
+    -main-is Day19.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day19p2
+  main-is:
+    src/Day19/Part2.hs
+  ghc-options:
+    -main-is Day19.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
 
 test-suite eta-aoc-test
   type:
@@ -594,6 +622,7 @@ test-suite eta-aoc-test
     Day16Spec
     Day17Spec
     Day18Spec
+    Day19Spec
   hs-source-dirs:
     test
   ghc-options:
@@ -921,6 +950,24 @@ test-suite eta-aoc-test-day18
     test
   ghc-options:
     -main-is Day18Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day19
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day19Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day19Spec.run
   build-depends:
     base >=4.8 && <4.12
     , containers

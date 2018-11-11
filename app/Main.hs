@@ -6,7 +6,6 @@ import qualified Day02.Part1 as D02P1
 import qualified Day02.Part2 as D02P2
 import qualified Day03.Part1 as D03P1
 import qualified Day03.Part2 as D03P2
-{-
 import qualified Day04.Part1 as D04P1
 import qualified Day04.Part2 as D04P2
 import qualified Day05.Part1 as D05P1
@@ -20,8 +19,8 @@ import qualified Day08.Part2 as D08P2
 import qualified Day09.Part1 as D09P1
 import qualified Day09.Part2 as D09P2
 import qualified Day10.Part1 as D10P1
-import qualified Day10.Part2 as D10P1
-import qualified Day11.Part1 as D11P2
+import qualified Day10.Part2 as D10P2
+import qualified Day11.Part1 as D11P1
 import qualified Day11.Part2 as D11P2
 import qualified Day12.Part1 as D12P1
 import qualified Day12.Part2 as D12P2
@@ -39,6 +38,7 @@ import qualified Day18.Part1 as D18P1
 import qualified Day18.Part2 as D18P2
 import qualified Day19.Part1 as D19P1
 import qualified Day19.Part2 as D19P2
+{-
 import qualified Day20.Part1 as D20P1
 import qualified Day20.Part2 as D20P2
 import qualified Day21.Part1 as D21P1
@@ -59,7 +59,6 @@ main = do
   D02P2.main
   D03P1.main
   D03P2.main
-{-
   D04P1.main
   D04P2.main
   D05P1.main
@@ -92,6 +91,7 @@ main = do
   D18P2.main
   D19P1.main
   D19P2.main
+{-
   D20P1.main
   D20P2.main
   D21P1.main
@@ -104,9 +104,7 @@ main = do
   D24P2.main
   D25P1.main
 -}
-{--
-    println(s"Day19: Part1: path -> ${Day19.Part1.solve(Day19.input)}")
-    println(s"Day19: Part2: steps -> ${Day19.Part2.solve(Day19.input)}")
+{-
     println(s"Day20: Part1: findclosest -> ${Day20.Part1.solve(Day20.input)}")
     println(s"Day20: Part2: nocollisions -> ${Day20.Part2.solve(Day20.input)}")
     println(s"Day21: Part1: after5 -> ${Day21.Part1.solve(Day21.input)}")
@@ -118,4 +116,4 @@ main = do
     println(s"Day24: Part1: strongest -> ${Day24.Part1.solve(Day24.input)}")
     println(s"Day24: Part2: longest -> ${Day24.Part2.solve(Day24.input)}")
     println(s"Day25: Part1: run -> ${Day25.Part1.solve(Day25.input)}")
---}
+-}

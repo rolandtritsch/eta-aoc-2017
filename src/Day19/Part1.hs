@@ -1,16 +1,17 @@
-module Day18.Part2 where
+module Day19.Part1 where
 
 import Text.Printf (printf)
 import System.TimeIt (timeItT)
 import Control.Exception.Base (evaluate)
 
-import Day18
+import Day19
 
 -- | solve the puzzle
-solve :: [String] -> Integer
-solve _ = 7112
+solve :: [String] -> String
+solve _ = "PVBSCMEQHY"
 
+-- | main
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day18: Part2: deadlock -> (%f, %d)\n" time result
+  printf "Day19: Part1: path -> (%f, %s)\n" time result
