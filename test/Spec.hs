@@ -20,8 +20,8 @@ import Day16Spec
 import Day17Spec
 import Day18Spec
 import Day19Spec
-{-
 import Day20Spec
+{-
 import Day21Spec
 import Day22Spec
 import Day23Spec
@@ -69,9 +69,9 @@ main = do
   Day18Spec.run
   putStrLn "\n--Day19Spec ..."
   Day19Spec.run
-{-
   putStrLn "\n--Day20Spec ..."
   Day20Spec.run
+{-
   putStrLn "\n--Day21Spec ..."
   Day21Spec.run
   putStrLn "\n--Day22Spec ..."
