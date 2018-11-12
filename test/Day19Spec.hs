@@ -1,5 +1,8 @@
 module Day19Spec where
 
+import Data.List (elemIndex)
+import Data.Maybe (fromJust)
+
 import Test.Hspec
 
 import Day19
@@ -10,7 +13,7 @@ run :: IO ()
 run = hspec $ do
   describe "input" $ do
     it "should read the (raw) input" $ do
-      input !! 1 `shouldBe` "                       +---------------------------------------------------------------------------+             +---------------------+             +---+       +-------------------------------------+ "
+      fromJust (elemIndex '|' (head input)) `shouldBe` 163
 
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do

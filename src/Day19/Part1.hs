@@ -7,8 +7,9 @@ import Control.Exception.Base (evaluate)
 import Day19
 
 -- | solve the puzzle
-solve :: [String] -> String
-solve _ = "PVBSCMEQHY"
+solve :: Maze -> String
+solve maze = path where
+  (Info path _) = crawl maze
 
 -- | main
 main :: IO ()
