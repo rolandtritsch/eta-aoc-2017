@@ -10,7 +10,7 @@ run :: IO ()
 run = hspec $ do
   describe "input" $ do
     it "should read the (raw) input" $ do
-      head input `shouldBe` "p=<1199,-2918,1457>, v=<-13,115,-8>, a=<-7,8,-10>"
+      head input `shouldBe` Particle (Position 1199 (-2918) 1457) (Velocity (-13) 115 (-8)) (Acceleration (-7) 8 (-10))
 
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
