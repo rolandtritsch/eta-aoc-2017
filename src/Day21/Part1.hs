@@ -7,8 +7,8 @@ import Control.Exception.Base (evaluate)
 import Day21
 
 -- | solve the puzzle
-solve :: [String] -> Int
-solve _ = 205
+solve :: [Rule] -> Int
+solve rs = countPixel $ runSimulation rs 5 startGrid
 
 -- | main
 main :: IO ()
