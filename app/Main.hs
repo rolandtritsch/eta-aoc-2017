@@ -42,9 +42,9 @@ import qualified Day20.Part1 as D20P1
 import qualified Day20.Part2 as D20P2
 import qualified Day21.Part1 as D21P1
 import qualified Day21.Part2 as D21P2
-{-
 import qualified Day22.Part1 as D22P1
 import qualified Day22.Part2 as D22P2
+{-
 import qualified Day23.Part1 as D23P1
 import qualified Day23.Part2 as D23P2
 import qualified Day24.Part1 as D24P1
@@ -95,9 +95,9 @@ main = do
   D20P2.main
   D21P1.main
   D21P2.main
-{-
   D22P1.main
   D22P2.main
+{-
   D23P1.main
   D23P2.main
   D24P1.main
@@ -105,8 +105,6 @@ main = do
   D25P1.main
 -}
 {-
-    println(s"Day22: Part1: simple -> ${Day22.Part1.solve(Day22.input)}")
-    println(s"Day22: Part2: advanced -> ${Day22.Part2.solve(Day22.input)}")
     println(s"Day23: Part1: run -> ${Day23.Part1.solve(Day23.input)}")
     println(s"Day23: Part2: run -> ${Day23.Part2.solve(Day23.input)}")
     println(s"Day24: Part1: strongest -> ${Day24.Part1.solve(Day24.input)}")
