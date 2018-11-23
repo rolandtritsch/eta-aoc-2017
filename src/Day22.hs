@@ -15,7 +15,7 @@ module Day22 where
 
 import Prelude hiding (Left, Right)
 
-import Data.Array
+import qualified Data.Map as M
 
 import Util
 
@@ -26,7 +26,7 @@ data Direction
   | Right
   deriving (Show, Eq)
 
-data Position = Position Int Int deriving (Show, Eq)
+data Position = Position Int Int deriving (Show, Eq, Ord)
 
 data NodeState
   = Clean
@@ -35,13 +35,9 @@ data NodeState
   | Flagged
   deriving (Show, Eq)
 
-type GridArray = Array (Int, Int) NodeState
+type GridArray = M.Map Position NodeState
 
 data Grid = Grid GridArray Position Direction Int deriving (Show, Eq)
-
--- | the dimension of the grid.
-dimension :: Int
-dimension = 500
 
 -- | buil the first/start grid.
 input :: Grid
@@ -55,15 +51,13 @@ inputGrid = (map processLine . inputRaw) "input/Day22input.txt" where
     processNode '#' = Infected
     processNode _ = error "Unknown state char detected."
 
--- | build a/the (array-based) grid from the (list-based) input grid.
+-- | build the (map-based) grid from the (list-based) input grid.
 buildGrid :: [[NodeState]] -> GridArray
-buildGrid ig = grid where
-  dim = ((negate dimension, negate dimension), (dimension, dimension))
-  dimRange = [(negate dimension)..dimension]
-  cleanGrid = array (dim) [((r, c), Clean) | r <- dimRange, c <- dimRange]
-  midpoint = div (length ig) 2
-  grid = cleanGrid // [((r - midpoint, c - midpoint), getStatus r c) | r <- [0..(length ig)-1], c <- [0..(length ig)-1]] where
-    getStatus r' c' = (ig !! r') !! c'
+buildGrid ig = M.fromList nodes where
+  midPoint = div (length ig) 2
+  dimRange = [(negate midPoint)..midPoint]
+  nodes = [((Position r c), get (r + midPoint) (c + midPoint)) | r <- dimRange, c <- dimRange]
+  get r c = (ig !! r) !! c
 
 -- | turn left.
 turnLeft :: Direction -> Direction
@@ -79,13 +73,18 @@ turnRight Down = Left
 turnRight Left = Up
 turnRight Right = Down
 
+-- | find/lookup a/the state of a/the given node (assuming an
+-- infinte 2D grid with clean nodes (as a default).
+lookupState :: Position -> GridArray -> NodeState
+lookupState p ga = M.findWithDefault Clean p ga
+
 -- | check state of the node.
-inState :: GridArray -> Position -> NodeState -> Bool
-inState ga (Position r c) s = (ga ! (r, c)) == s
+inState :: Position -> NodeState -> GridArray -> Bool
+inState p s ga = lookupState p ga == s
 
 -- | update the state grid with a new state.
-update :: Position -> NodeState -> GridArray -> GridArray
-update (Position r c) s ga = ga // [((r, c), s)]
+updateState :: Position -> NodeState -> GridArray -> GridArray
+updateState p s ga = M.insert p s ga
 
 -- | do one move/step forward.
 move :: Grid -> Grid
