@@ -88,6 +88,9 @@ library
     Day22
     Day22.Part1
     Day22.Part2
+    Day23
+    Day23.Part1
+    Day23.Part2
     Util
   hs-source-dirs:
     src
@@ -687,6 +690,32 @@ executable eta-aoc-day22p2
   default-language:
     Haskell2010
 
+executable eta-aoc-day23p1
+  main-is:
+    src/Day23/Part1.hs
+  ghc-options:
+    -main-is Day23.Part1.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
+executable eta-aoc-day23p2
+  main-is:
+    src/Day23/Part2.hs
+  ghc-options:
+    -main-is Day23.Part2.main
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , timeit
+  default-language:
+    Haskell2010
+
 test-suite eta-aoc-test
   type:
     exitcode-stdio-1.0
@@ -715,6 +744,7 @@ test-suite eta-aoc-test
     Day20Spec
     Day21Spec
     Day22Spec
+    Day23Spec
   hs-source-dirs:
     test
   ghc-options:
@@ -1114,6 +1144,24 @@ test-suite eta-aoc-test-day22
     test
   ghc-options:
     -main-is Day22Spec.run
+  build-depends:
+    base >=4.8 && <4.12
+    , containers
+    , eta-aoc
+    , hspec
+    , timeit
+  default-language:
+    Haskell2010
+
+test-suite eta-aoc-test-day23
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    Day23Spec.hs
+  hs-source-dirs:
+    test
+  ghc-options:
+    -main-is Day23Spec.run
   build-depends:
     base >=4.8 && <4.12
     , containers
