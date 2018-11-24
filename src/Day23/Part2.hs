@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fno-warn-type-defaults #-}
 module Day23.Part2 where
 
 import Text.Printf (printf)
@@ -8,7 +9,13 @@ import Day23
 
 -- | solve the puzzle
 solve :: [String] -> Int
-solve _ = 903
+solve _ = length $ filter (not . isPrime) [first, second..end] where
+  seed = 84
+  first = seed * 100 + 100000
+  end = first + 17000
+  step = 17
+  second = first + step
+  isPrime n = null $ filter (\d -> (mod n d) == 0) $ takeWhile (\i -> i * i <= n) [2..n]
 
 -- | main
 main :: IO ()
