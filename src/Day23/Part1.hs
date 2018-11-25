@@ -4,11 +4,13 @@ import Text.Printf (printf)
 import System.TimeIt (timeItT)
 import Control.Exception.Base (evaluate)
 
+import qualified Data.Map as M
+
 import Day23
 
 -- | solve the puzzle
-solve :: [String] -> Int
-solve _ = 6724
+solve :: [Assembler] -> Integer
+solve program = (runProgram (Running 0 M.empty) . instructions) program
 
 -- | main
 main :: IO ()
