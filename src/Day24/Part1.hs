@@ -7,8 +7,9 @@ import Control.Exception.Base (evaluate)
 import Day24
 
 -- | solve the puzzle
-solve :: [String] -> Int
-solve _ = 1695
+solve :: [Component] -> Integer
+solve cs = maximum $ map sum bs where
+  bs = bridges $ root cs
 
 -- | main
 main :: IO ()
