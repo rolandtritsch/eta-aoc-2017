@@ -48,9 +48,8 @@ import qualified Day23.Part1 as D23P1
 import qualified Day23.Part2 as D23P2
 import qualified Day24.Part1 as D24P1
 import qualified Day24.Part2 as D24P2
-{-
 import qualified Day25.Part1 as D25P1
--}
+
 main :: IO ()
 main = do
   D01P1.main
@@ -101,9 +100,4 @@ main = do
   D23P2.main
   D24P1.main
   D24P2.main
-{-
   D25P1.main
--}
-{-
-    println(s"Day25: Part1: run -> ${Day25.Part1.solve(Day25.input)}")
--}
