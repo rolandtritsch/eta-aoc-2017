@@ -9,7 +9,7 @@ run :: IO ()
 run = hspec $ do
   describe "input" $ do
     it "should read the (raw) input" $ do
-      head input `shouldBe` "Begin in state A."
+      input `shouldBe` 12667664
 
   describe "solve - Part1" $ do
     it "should solve the puzzle" $ do
