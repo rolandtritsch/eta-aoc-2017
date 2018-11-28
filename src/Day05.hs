@@ -16,24 +16,24 @@ Part2 - Increase the stack counter as described in the problem statement.
 -}
 module Day05 where
 
+import qualified Data.Map as M
+
 import Util (inputRaw)
 
-type Stack = [Int]
+type Stack = M.Map Int Int
 
 -- | read the input
 input :: Stack
-input = map read $ inputRaw "input/Day05input.txt"
+input = M.fromList $ zip [0..] $ map read $ inputRaw "input/Day05input.txt"
 
 -- ! update the stack (with a new offset)
 update :: Int -> (Int -> Int) -> Stack -> Stack
-update counter offset stack = top ++ [offset (stack !! counter)] ++ buttom where
-  top = take counter stack
-  buttom = drop (counter + 1) stack
+update counter offset stack = M.insert counter (offset (stack M.! counter)) stack
 
 -- | execute jumps until you outside the stack
 jump :: Stack -> Int -> (Int -> Int) -> Int -> Int
 jump stack counter offset step
-  | counter < 0 || counter >= length stack = step
+  | counter < 0 || counter >= M.size stack = step
   | otherwise = jump nextStack nextCounter offset (step + 1) where
       nextStack = update counter offset stack
-      nextCounter = counter + (stack !! counter)
+      nextCounter = counter + (stack M.! counter)

@@ -7,8 +7,8 @@ import Control.Exception.Base (evaluate)
 import Day13
 
 -- | solve the puzzle
-solve :: Layers -> Int
-solve layers = calcSecScore $ buildFirewall layers 0
+solve :: Layers -> Integer
+solve layers = snd $ calcSecScore 0 $ buildFirewall layers
 
 -- | main
 main :: IO ()

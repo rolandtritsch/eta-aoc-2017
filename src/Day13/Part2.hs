@@ -7,13 +7,13 @@ import Control.Exception.Base (evaluate)
 import Day13
 
 -- | solve the puzzle
-solve :: Layers -> Int
-solve layers = go 0 where
-  go delay
-    | passThrough delay = delay
-    | otherwise = go (delay + 1)
+solve :: Layers -> Integer
+solve layers = go 0 (buildFirewall layers) where
+  go delay fw
+    | passThrough = delay
+    | otherwise = go (delay + 1) fw
     where
-      passThrough delay' = (calcSecScore $ buildFirewall layers delay') == 0
+      passThrough = not $ fst $ calcSecScore delay fw
 
 -- | main
 main :: IO ()
