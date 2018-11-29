@@ -46,9 +46,11 @@ input2Lengths input' = map fst $ rights $ map decimal $ split ((==) ',') $ pack 
 -- | reverse the segment defined by start and length
 reverseSegment :: Hash -> Position -> Length -> Hash
 reverseSegment hash' start' length' = shiftRight start' $ reverse' length' $ shiftLeft start' hash' where
-  shiftLeft 0 hash'' = hash''
-  shiftLeft 1 (head':tail') = tail' ++ [head']
-  shiftLeft times hash'' = shiftLeft (times - 1) (shiftLeft 1 hash'')
+  shiftLeft times hash'' = take lhash . drop (mod times lhash) . cycle $ hash''
+    where lhash = length hash''
+  --shiftLeft 0 hash'' = hash''
+  --shiftLeft 1 (head':tail') = tail' ++ [head']
+  --shiftLeft times hash'' = shiftLeft (times - 1) (shiftLeft 1 hash'')
   shiftRight times hash'' = shiftLeft ((length hash'') - times) hash''
   reverse' length'' hash'' = (reverse $ take length'' hash'') ++ (drop length'' hash'')
 
