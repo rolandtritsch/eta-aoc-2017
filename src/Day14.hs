@@ -59,26 +59,28 @@ hex2bin _ = error "Unknown hex char"
 buildGrid :: String -> Grid
 buildGrid key = map (map ((==) '1')) $ map (concatMap hex2bin) $ map (buildHash key) [0..127]
 
--- | is the given square used
+-- | is the given square used.
 isUsed :: Grid -> (Int, Int) -> Bool
 isUsed grid (row, col) = (grid !! row) !! col
 
+-- | is the given square (still) within the boundaries of the grid.
+isOnGrid :: Grid -> (Int, Int) -> Bool
+isOnGrid grid (row, col) = row >= 0 && row < (length grid) && col >= 0 && col < (length (head grid))
+
 -- | given a (start) square, find all (used) adjacent squares (and make sure you do not loop)
 findRegion :: Grid -> S.Set (Int, Int) -> (Int, Int) -> S.Set (Int, Int)
-findRegion grid alreadySeen coordinates@(row, col)
-  | S.member coordinates alreadySeen = S.empty
-  | row < 0 || row > 127 = S.empty
-  | col < 0 || col > 127 = S.empty
-  | (not . isUsed grid) coordinates = S.empty
-  | otherwise =
-    S.union (findRegion grid (S.insert coordinates alreadySeen) (row + 1, col)) $
-    S.union (findRegion grid (S.insert coordinates alreadySeen) (row - 1, col)) $
-    S.union (findRegion grid (S.insert coordinates alreadySeen) (row, col + 1)) $
-    S.union (findRegion grid (S.insert coordinates alreadySeen) (row, col - 1)) $
-    S.singleton coordinates
+findRegion grid alreadySeen currentSquare@(row, col)
+  | S.member currentSquare alreadySeen = alreadySeen
+  | (not . isOnGrid grid) currentSquare = alreadySeen
+  | (not . isUsed grid) currentSquare = alreadySeen
+  | otherwise = foldl checkFourDirections (S.insert currentSquare alreadySeen) fourDirections where
+      fourDirections = [(row + 1, col), (row - 1, col), (row, col + 1), (row, col - 1)]
+      checkFourDirections alreadySeen' currentSquare' = findRegion grid alreadySeen' currentSquare'
 
 -- | find all regions
 findRegions :: Grid -> S.Set (S.Set (Int, Int))
 findRegions grid = S.filter (not . S.null) $ foldl findRegions' S.empty coordinates where
-  findRegions' regionsSoFar currentSquare = S.insert (findRegion grid (S.unions $ S.toList regionsSoFar) currentSquare) regionsSoFar
-  coordinates = [(row, col) | row <- [0..127], col <- [0..127]]
+  findRegions' regionsSoFar currentSquare = if (S.member currentSquare alreadySeen) then regionsSoFar else S.insert currentRegion regionsSoFar where
+    alreadySeen = S.unions $ S.toList regionsSoFar
+    currentRegion = findRegion grid S.empty currentSquare
+  coordinates = [(row, col) | row <- [0..(length grid) -1], col <- [0..(length (head grid)) - 1]]
