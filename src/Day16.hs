@@ -67,3 +67,8 @@ moves input' = map move input' where
     fromChar = argument !! 0
     toChar = argument !! 2
   move _ = error "Unknown move"
+
+-- | solve (with initial program)
+runProgram :: [String] -> String -> String
+runProgram programs initial = foldl apply initial (moves programs) where
+  apply program' move = move program'

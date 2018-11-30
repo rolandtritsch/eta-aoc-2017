@@ -28,7 +28,7 @@ writeCount.
 -}
 module Day18 where
 
-import qualified Data.Map.Strict as M
+import qualified Data.Map as M
 
 import Util
 
@@ -128,7 +128,11 @@ instructions input' = map (instruction . tokenize) input' where
   instruction ("jgz":arguments) = jgz' (getRegister (arguments !! 0)) (buildValue (arguments !! 1))
   instruction _ = error "Unknown instruction"
 
- -- | run the instructions (until we are done)
+-- | the initial state.
+initialState :: State
+initialState = Running 0 M.empty
+
+-- | run the instructions (until we are done)
 run :: State -> [Instruction] -> Integer
 run (Done exit) _ = exit
 run currentState@(Running pc  _) program = run nextState program where

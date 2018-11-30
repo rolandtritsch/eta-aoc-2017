@@ -18,7 +18,7 @@ Part2 - Implement the algorithm above in [[Part2.solve]].
 -}
 module Day23 where
 
-import qualified Data.Map.Strict as M
+import qualified Data.Map as M
 
 import Data.Ix (inRange)
 
@@ -99,7 +99,11 @@ instructions input' = map (instruction . tokenize) input' where
   instruction ("jnz":arguments) = jnz' (getRegister (arguments !! 0)) (buildValue (arguments !! 1))
   instruction _ = error "Unknown instruction"
 
- -- | run the instructions (until we are done)
+-- | the initial state.
+initialState :: State
+initialState = Running 0 M.empty
+
+-- | run the instructions (until we are done)
 runProgram :: State -> [Instruction] -> Integer
 runProgram (Done exit) _ = exit
 runProgram currentState@(Running pc rs) program = runProgram nextState program where
