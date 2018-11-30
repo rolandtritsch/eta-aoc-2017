@@ -23,90 +23,40 @@ source-repository head
 library
   exposed-modules:
     Day01
-    Day01.Part1
-    Day01.Part2
     Day02
-    Day02.Part1
-    Day02.Part2
     Day03
-    Day03.Part1
-    Day03.Part2
     Day04
-    Day04.Part1
-    Day04.Part2
     Day05
-    Day05.Part1
-    Day05.Part2
     Day06
-    Day06.Part1
-    Day06.Part2
     Day07
-    Day07.Part1
-    Day07.Part2
     Day08
-    Day08.Part1
-    Day08.Part2
     Day09
-    Day09.Part1
-    Day09.Part2
     Day10
-    Day10.Part1
-    Day10.Part2
     Day11
-    Day11.Part1
-    Day11.Part2
     Day12
-    Day12.Part1
-    Day12.Part2
     Day13
-    Day13.Part1
-    Day13.Part2
     Day14
-    Day14.Part1
-    Day14.Part2
     Day15
-    Day15.Part1
-    Day15.Part2
     Day16
-    Day16.Part1
-    Day16.Part2
     Day17
-    Day17.Part1
-    Day17.Part2
     Day18
-    Day18.Part1
-    Day18.Part2
     Day19
-    Day19.Part1
-    Day19.Part2
     Day20
-    Day20.Part1
-    Day20.Part2
     Day21
-    Day21.Part1
-    Day21.Part2
     Day22
-    Day22.Part1
-    Day22.Part2
     Day23
-    Day23.Part1
-    Day23.Part2
     Day24
-    Day24.Part1
-    Day24.Part2
     Day25
-    Day25.Part1
     Util
   hs-source-dirs:
     src
   build-depends:
     base >=4.8 && <4.12
-    , split
-    , containers
     , Unique
-    , text
+    , containers
     , hexstring
-    , timeit
+    , split
+    , text
   default-language:
     Haskell2010
 
@@ -118,18 +68,17 @@ executable eta-aoc-exe
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
-    , Unique
+    , timeit
   default-language:
     Haskell2010
 
 executable eta-aoc-day01p1
   main-is:
-    src/Day01/Part1.hs
+    app/Day01/Part1.hs
   ghc-options:
     -main-is Day01.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -137,12 +86,11 @@ executable eta-aoc-day01p1
 
 executable eta-aoc-day01p2
   main-is:
-    src/Day01/Part2.hs
+    app/Day01/Part2.hs
   ghc-options:
     -main-is Day01.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -150,12 +98,11 @@ executable eta-aoc-day01p2
 
 executable eta-aoc-day02p1
   main-is:
-    src/Day02/Part1.hs
+    app/Day02/Part1.hs
   ghc-options:
     -main-is Day02.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -163,12 +110,11 @@ executable eta-aoc-day02p1
 
 executable eta-aoc-day02p2
   main-is:
-    src/Day02/Part2.hs
+    app/Day02/Part2.hs
   ghc-options:
     -main-is Day02.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -176,12 +122,11 @@ executable eta-aoc-day02p2
 
 executable eta-aoc-day03p1
   main-is:
-    src/Day03/Part1.hs
+    app/Day03/Part1.hs
   ghc-options:
     -main-is Day03.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -189,12 +134,11 @@ executable eta-aoc-day03p1
 
 executable eta-aoc-day03p2
   main-is:
-    src/Day03/Part2.hs
+    app/Day03/Part2.hs
   ghc-options:
     -main-is Day03.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -202,12 +146,11 @@ executable eta-aoc-day03p2
 
 executable eta-aoc-day04p1
   main-is:
-    src/Day04/Part1.hs
+    app/Day04/Part1.hs
   ghc-options:
     -main-is Day04.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -215,12 +158,11 @@ executable eta-aoc-day04p1
 
 executable eta-aoc-day04p2
   main-is:
-    src/Day04/Part2.hs
+    app/Day04/Part2.hs
   ghc-options:
     -main-is Day04.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -228,12 +170,11 @@ executable eta-aoc-day04p2
 
 executable eta-aoc-day05p1
   main-is:
-    src/Day05/Part1.hs
+    app/Day05/Part1.hs
   ghc-options:
     -main-is Day05.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -241,12 +182,11 @@ executable eta-aoc-day05p1
 
 executable eta-aoc-day05p2
   main-is:
-    src/Day05/Part2.hs
+    app/Day05/Part2.hs
   ghc-options:
     -main-is Day05.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -254,12 +194,11 @@ executable eta-aoc-day05p2
 
 executable eta-aoc-day06p1
   main-is:
-    src/Day06/Part1.hs
+    app/Day06/Part1.hs
   ghc-options:
     -main-is Day06.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -267,12 +206,11 @@ executable eta-aoc-day06p1
 
 executable eta-aoc-day06p2
   main-is:
-    src/Day06/Part2.hs
+    app/Day06/Part2.hs
   ghc-options:
     -main-is Day06.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -280,12 +218,11 @@ executable eta-aoc-day06p2
 
 executable eta-aoc-day07p1
   main-is:
-    src/Day07/Part1.hs
+    app/Day07/Part1.hs
   ghc-options:
     -main-is Day07.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -293,12 +230,11 @@ executable eta-aoc-day07p1
 
 executable eta-aoc-day07p2
   main-is:
-    src/Day07/Part2.hs
+    app/Day07/Part2.hs
   ghc-options:
     -main-is Day07.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -306,12 +242,11 @@ executable eta-aoc-day07p2
 
 executable eta-aoc-day08p1
   main-is:
-    src/Day08/Part1.hs
+    app/Day08/Part1.hs
   ghc-options:
     -main-is Day08.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -319,12 +254,11 @@ executable eta-aoc-day08p1
 
 executable eta-aoc-day08p2
   main-is:
-    src/Day08/Part2.hs
+    app/Day08/Part2.hs
   ghc-options:
     -main-is Day08.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -332,12 +266,11 @@ executable eta-aoc-day08p2
 
 executable eta-aoc-day09p1
   main-is:
-    src/Day09/Part1.hs
+    app/Day09/Part1.hs
   ghc-options:
     -main-is Day09.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -345,12 +278,11 @@ executable eta-aoc-day09p1
 
 executable eta-aoc-day09p2
   main-is:
-    src/Day09/Part2.hs
+    app/Day09/Part2.hs
   ghc-options:
     -main-is Day09.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -358,12 +290,11 @@ executable eta-aoc-day09p2
 
 executable eta-aoc-day10p1
   main-is:
-    src/Day10/Part1.hs
+    app/Day10/Part1.hs
   ghc-options:
     -main-is Day10.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -371,12 +302,11 @@ executable eta-aoc-day10p1
 
 executable eta-aoc-day10p2
   main-is:
-    src/Day10/Part2.hs
+    app/Day10/Part2.hs
   ghc-options:
     -main-is Day10.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -384,12 +314,11 @@ executable eta-aoc-day10p2
 
 executable eta-aoc-day11p1
   main-is:
-    src/Day11/Part1.hs
+    app/Day11/Part1.hs
   ghc-options:
     -main-is Day11.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -397,12 +326,11 @@ executable eta-aoc-day11p1
 
 executable eta-aoc-day11p2
   main-is:
-    src/Day11/Part2.hs
+    app/Day11/Part2.hs
   ghc-options:
     -main-is Day11.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -410,12 +338,11 @@ executable eta-aoc-day11p2
 
 executable eta-aoc-day12p1
   main-is:
-    src/Day12/Part1.hs
+    app/Day12/Part1.hs
   ghc-options:
     -main-is Day12.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -423,12 +350,11 @@ executable eta-aoc-day12p1
 
 executable eta-aoc-day12p2
   main-is:
-    src/Day12/Part2.hs
+    app/Day12/Part2.hs
   ghc-options:
     -main-is Day12.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -436,12 +362,11 @@ executable eta-aoc-day12p2
 
 executable eta-aoc-day13p1
   main-is:
-    src/Day13/Part1.hs
+    app/Day13/Part1.hs
   ghc-options:
     -main-is Day13.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -449,12 +374,11 @@ executable eta-aoc-day13p1
 
 executable eta-aoc-day13p2
   main-is:
-    src/Day13/Part2.hs
+    app/Day13/Part2.hs
   ghc-options:
     -main-is Day13.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -462,12 +386,11 @@ executable eta-aoc-day13p2
 
 executable eta-aoc-day14p1
   main-is:
-    src/Day14/Part1.hs
+    app/Day14/Part1.hs
   ghc-options:
     -main-is Day14.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -475,12 +398,11 @@ executable eta-aoc-day14p1
 
 executable eta-aoc-day14p2
   main-is:
-    src/Day14/Part2.hs
+    app/Day14/Part2.hs
   ghc-options:
     -main-is Day14.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -488,12 +410,11 @@ executable eta-aoc-day14p2
 
 executable eta-aoc-day15p1
   main-is:
-    src/Day15/Part1.hs
+    app/Day15/Part1.hs
   ghc-options:
     -main-is Day15.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -501,12 +422,11 @@ executable eta-aoc-day15p1
 
 executable eta-aoc-day15p2
   main-is:
-    src/Day15/Part2.hs
+    app/Day15/Part2.hs
   ghc-options:
     -main-is Day15.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -514,12 +434,11 @@ executable eta-aoc-day15p2
 
 executable eta-aoc-day16p1
   main-is:
-    src/Day16/Part1.hs
+    app/Day16/Part1.hs
   ghc-options:
     -main-is Day16.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -527,12 +446,11 @@ executable eta-aoc-day16p1
 
 executable eta-aoc-day16p2
   main-is:
-    src/Day16/Part2.hs
+    app/Day16/Part2.hs
   ghc-options:
     -main-is Day16.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -540,12 +458,11 @@ executable eta-aoc-day16p2
 
 executable eta-aoc-day17p1
   main-is:
-    src/Day17/Part1.hs
+    app/Day17/Part1.hs
   ghc-options:
     -main-is Day17.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -553,12 +470,11 @@ executable eta-aoc-day17p1
 
 executable eta-aoc-day17p2
   main-is:
-    src/Day17/Part2.hs
+    app/Day17/Part2.hs
   ghc-options:
     -main-is Day17.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -566,12 +482,11 @@ executable eta-aoc-day17p2
 
 executable eta-aoc-day18p1
   main-is:
-    src/Day18/Part1.hs
+    app/Day18/Part1.hs
   ghc-options:
     -main-is Day18.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -579,12 +494,11 @@ executable eta-aoc-day18p1
 
 executable eta-aoc-day18p2
   main-is:
-    src/Day18/Part2.hs
+    app/Day18/Part2.hs
   ghc-options:
     -main-is Day18.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -592,12 +506,11 @@ executable eta-aoc-day18p2
 
 executable eta-aoc-day19p1
   main-is:
-    src/Day19/Part1.hs
+    app/Day19/Part1.hs
   ghc-options:
     -main-is Day19.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -605,12 +518,11 @@ executable eta-aoc-day19p1
 
 executable eta-aoc-day19p2
   main-is:
-    src/Day19/Part2.hs
+    app/Day19/Part2.hs
   ghc-options:
     -main-is Day19.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -618,12 +530,11 @@ executable eta-aoc-day19p2
 
 executable eta-aoc-day20p1
   main-is:
-    src/Day20/Part1.hs
+    app/Day20/Part1.hs
   ghc-options:
     -main-is Day20.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -631,12 +542,11 @@ executable eta-aoc-day20p1
 
 executable eta-aoc-day20p2
   main-is:
-    src/Day20/Part2.hs
+    app/Day20/Part2.hs
   ghc-options:
     -main-is Day20.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
     , Unique
@@ -645,12 +555,11 @@ executable eta-aoc-day20p2
 
 executable eta-aoc-day21p1
   main-is:
-    src/Day21/Part1.hs
+    app/Day21/Part1.hs
   ghc-options:
     -main-is Day21.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -658,12 +567,11 @@ executable eta-aoc-day21p1
 
 executable eta-aoc-day21p2
   main-is:
-    src/Day21/Part2.hs
+    app/Day21/Part2.hs
   ghc-options:
     -main-is Day21.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -671,12 +579,11 @@ executable eta-aoc-day21p2
 
 executable eta-aoc-day22p1
   main-is:
-    src/Day22/Part1.hs
+    app/Day22/Part1.hs
   ghc-options:
     -main-is Day22.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -684,12 +591,11 @@ executable eta-aoc-day22p1
 
 executable eta-aoc-day22p2
   main-is:
-    src/Day22/Part2.hs
+    app/Day22/Part2.hs
   ghc-options:
     -main-is Day22.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -697,12 +603,11 @@ executable eta-aoc-day22p2
 
 executable eta-aoc-day23p1
   main-is:
-    src/Day23/Part1.hs
+    app/Day23/Part1.hs
   ghc-options:
     -main-is Day23.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -710,12 +615,11 @@ executable eta-aoc-day23p1
 
 executable eta-aoc-day23p2
   main-is:
-    src/Day23/Part2.hs
+    app/Day23/Part2.hs
   ghc-options:
     -main-is Day23.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -723,12 +627,11 @@ executable eta-aoc-day23p2
 
 executable eta-aoc-day24p1
   main-is:
-    src/Day24/Part1.hs
+    app/Day24/Part1.hs
   ghc-options:
     -main-is Day24.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -736,12 +639,11 @@ executable eta-aoc-day24p1
 
 executable eta-aoc-day24p2
   main-is:
-    src/Day24/Part2.hs
+    app/Day24/Part2.hs
   ghc-options:
     -main-is Day24.Part2.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -749,12 +651,11 @@ executable eta-aoc-day24p2
 
 executable eta-aoc-day25p1
   main-is:
-    src/Day25/Part1.hs
+    app/Day25/Part1.hs
   ghc-options:
     -main-is Day25.Part1.main
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , timeit
   default-language:
@@ -814,10 +715,8 @@ test-suite eta-aoc-test-day01
     -main-is Day01Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -832,10 +731,8 @@ test-suite eta-aoc-test-day02
     -main-is Day02Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -850,10 +747,8 @@ test-suite eta-aoc-test-day03
     -main-is Day03Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -868,10 +763,8 @@ test-suite eta-aoc-test-day04
     -main-is Day04Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -886,10 +779,8 @@ test-suite eta-aoc-test-day05
     -main-is Day05Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -904,10 +795,8 @@ test-suite eta-aoc-test-day06
     -main-is Day06Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -922,10 +811,8 @@ test-suite eta-aoc-test-day07
     -main-is Day07Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -940,10 +827,8 @@ test-suite eta-aoc-test-day08
     -main-is Day08Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -958,10 +843,8 @@ test-suite eta-aoc-test-day09
     -main-is Day09Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -976,10 +859,8 @@ test-suite eta-aoc-test-day10
     -main-is Day10Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -994,10 +875,8 @@ test-suite eta-aoc-test-day11
     -main-is Day11Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1012,10 +891,8 @@ test-suite eta-aoc-test-day12
     -main-is Day12Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1030,10 +907,8 @@ test-suite eta-aoc-test-day13
     -main-is Day13Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1048,10 +923,8 @@ test-suite eta-aoc-test-day14
     -main-is Day14Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1066,10 +939,8 @@ test-suite eta-aoc-test-day15
     -main-is Day15Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1084,10 +955,8 @@ test-suite eta-aoc-test-day16
     -main-is Day16Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1102,10 +971,8 @@ test-suite eta-aoc-test-day17
     -main-is Day17Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1120,10 +987,8 @@ test-suite eta-aoc-test-day18
     -main-is Day18Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1138,10 +1003,8 @@ test-suite eta-aoc-test-day19
     -main-is Day19Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1156,10 +1019,8 @@ test-suite eta-aoc-test-day20
     -main-is Day20Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1174,10 +1035,8 @@ test-suite eta-aoc-test-day21
     -main-is Day21Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1192,10 +1051,8 @@ test-suite eta-aoc-test-day22
     -main-is Day22Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1210,10 +1067,8 @@ test-suite eta-aoc-test-day23
     -main-is Day23Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1228,10 +1083,8 @@ test-suite eta-aoc-test-day24
     -main-is Day24Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010
 
@@ -1246,9 +1099,7 @@ test-suite eta-aoc-test-day25
     -main-is Day25Spec.run
   build-depends:
     base >=4.8 && <4.12
-    , containers
     , eta-aoc
     , hspec
-    , timeit
   default-language:
     Haskell2010

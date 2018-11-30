@@ -23,7 +23,7 @@ import qualified Data.Set as S
 
 import Util
 
-import qualified Day10.Part2 as D10P2
+import qualified Day10 as D10
 
 type Grid = [[Bool]]
 
@@ -33,7 +33,8 @@ input = head $ inputRaw "input/Day14input.txt"
 
 -- | build a/the (hex) hash (for a given key/row)
 buildHash :: String -> Int -> String
-buildHash key row = D10P2.solve (key ++ "-" ++ (show row))
+buildHash key row = solve (key ++ "-" ++ (show row)) where
+  solve key' = D10.dense2hex $ D10.sparse2dense $ D10.hash $ D10.knots (D10.encode key') D10.rounds
 
 -- | convert a hex char to a/the binary (string) representation of that char
 hex2bin :: Char -> String
