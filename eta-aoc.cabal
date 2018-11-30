@@ -701,13 +701,16 @@ test-suite eta-aoc-test
     Day25Spec
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Spec.main
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
     , containers
+    , Unique
   default-language:
     Haskell2010
 
@@ -734,12 +737,14 @@ test-suite eta-aoc-test-day02
     Day02Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day02Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -750,12 +755,15 @@ test-suite eta-aoc-test-day03
     Day03Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day03Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010
 
@@ -766,12 +774,14 @@ test-suite eta-aoc-test-day04
     Day04Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day04Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -782,12 +792,15 @@ test-suite eta-aoc-test-day05
     Day05Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day05Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010
 
@@ -798,12 +811,14 @@ test-suite eta-aoc-test-day06
     Day06Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day06Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -814,12 +829,15 @@ test-suite eta-aoc-test-day07
     Day07Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day07Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010
 
@@ -830,12 +848,15 @@ test-suite eta-aoc-test-day08
     Day08Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day08Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010
 
@@ -846,12 +867,14 @@ test-suite eta-aoc-test-day09
     Day09Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day09Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -862,12 +885,14 @@ test-suite eta-aoc-test-day10
     Day10Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day10Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -878,12 +903,14 @@ test-suite eta-aoc-test-day11
     Day11Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day11Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -894,12 +921,15 @@ test-suite eta-aoc-test-day12
     Day12Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day12Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010
 
@@ -910,12 +940,15 @@ test-suite eta-aoc-test-day13
     Day13Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day13Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010
 
@@ -926,12 +959,15 @@ test-suite eta-aoc-test-day14
     Day14Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day14Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010
 
@@ -942,12 +978,14 @@ test-suite eta-aoc-test-day15
     Day15Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day15Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -958,12 +996,14 @@ test-suite eta-aoc-test-day16
     Day16Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day16Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -974,12 +1014,14 @@ test-suite eta-aoc-test-day17
     Day17Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day17Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -990,12 +1032,14 @@ test-suite eta-aoc-test-day18
     Day18Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day18Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -1006,12 +1050,14 @@ test-suite eta-aoc-test-day19
     Day19Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day19Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -1022,12 +1068,15 @@ test-suite eta-aoc-test-day20
     Day20Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day20Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , Unique
   default-language:
     Haskell2010
 
@@ -1038,12 +1087,14 @@ test-suite eta-aoc-test-day21
     Day21Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day21Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -1054,12 +1105,15 @@ test-suite eta-aoc-test-day22
     Day22Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day22Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010
 
@@ -1070,12 +1124,14 @@ test-suite eta-aoc-test-day23
     Day23Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day23Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
   default-language:
     Haskell2010
 
@@ -1086,12 +1142,15 @@ test-suite eta-aoc-test-day24
     Day24Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day24Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010
 
@@ -1102,11 +1161,14 @@ test-suite eta-aoc-test-day25
     Day25Spec.hs
   hs-source-dirs:
     test
+    app
   ghc-options:
     -main-is Day25Spec.run
   build-depends:
     base >=4.8 && <4.12
     , eta-aoc
     , hspec
+    , timeit
+    , containers
   default-language:
     Haskell2010

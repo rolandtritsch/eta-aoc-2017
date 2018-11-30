@@ -1,6 +1,6 @@
 module Day13Spec where
 
-import qualified Data.Map.Strict as M
+import qualified Data.Map as M
 
 import Test.Hspec
 
