@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 eta_version=$(etlas exec eta -- --version | cut -d, -f2 | cut -d\  -f3 | sed s/b/./g)
 

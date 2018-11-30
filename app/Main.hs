@@ -9,7 +9,7 @@ import qualified Day03.Part2 as D03P2
 import qualified Day04.Part1 as D04P1
 import qualified Day04.Part2 as D04P2
 import qualified Day05.Part1 as D05P1
-import qualified Day05.Part2 as D05P2
+--import qualified Day05.Part2 as D05P2
 import qualified Day06.Part1 as D06P1
 import qualified Day06.Part2 as D06P2
 import qualified Day07.Part1 as D07P1
@@ -26,14 +26,14 @@ import qualified Day12.Part1 as D12P1
 import qualified Day12.Part2 as D12P2
 import qualified Day13.Part1 as D13P1
 import qualified Day13.Part2 as D13P2
-import qualified Day14.Part1 as D14P1
-import qualified Day14.Part2 as D14P2
-import qualified Day15.Part1 as D15P1
+--import qualified Day14.Part1 as D14P1
+--import qualified Day14.Part2 as D14P2
+--import qualified Day15.Part1 as D15P1
 import qualified Day15.Part2 as D15P2
 import qualified Day16.Part1 as D16P1
 import qualified Day16.Part2 as D16P2
 import qualified Day17.Part1 as D17P1
-import qualified Day17.Part2 as D17P2
+--import qualified Day17.Part2 as D17P2
 import qualified Day18.Part1 as D18P1
 import qualified Day18.Part2 as D18P2
 import qualified Day19.Part1 as D19P1
@@ -42,13 +42,13 @@ import qualified Day20.Part1 as D20P1
 import qualified Day20.Part2 as D20P2
 import qualified Day21.Part1 as D21P1
 import qualified Day21.Part2 as D21P2
-import qualified Day22.Part1 as D22P1
+--import qualified Day22.Part1 as D22P1
 import qualified Day22.Part2 as D22P2
 import qualified Day23.Part1 as D23P1
 import qualified Day23.Part2 as D23P2
 import qualified Day24.Part1 as D24P1
 import qualified Day24.Part2 as D24P2
-import qualified Day25.Part1 as D25P1
+--import qualified Day25.Part1 as D25P1
 
 main :: IO ()
 main = do
@@ -61,7 +61,8 @@ main = do
   D04P1.main
   D04P2.main
   D05P1.main
-  D05P2.main
+  --D05P2.main
+  putStrLn "TODO - Day05: Part2: dummy -> (0, 0)"
   D06P1.main
   D06P2.main
   D07P1.main
@@ -78,14 +79,18 @@ main = do
   D12P2.main
   D13P1.main
   D13P2.main
-  D14P1.main
-  D14P2.main
-  D15P1.main
+  --D14P1.main
+  putStrLn "TODO - Day14: Part2: dummy -> (0, 0)"
+  --D14P2.main
+  putStrLn "TODO - Day14: Part2: dummy -> (0, 0)"
+  --D15P1.main
+  putStrLn "TODO - Day15: Part1: dummy -> (0, 0)"
   D15P2.main
   D16P1.main
   D16P2.main
   D17P1.main
-  D17P2.main
+  --D17P2.main
+  putStrLn "TODO - Day17: Part2: dummy -> (0, 0)"
   D18P1.main
   D18P2.main
   D19P1.main
@@ -95,9 +100,11 @@ main = do
   D21P1.main
   D21P2.main
   D22P1.main
-  D22P2.main
+  --D22P2.main
+  putStrLn "TODO - Day22: Part2: dummy -> (0, 0)"
   D23P1.main
   D23P2.main
   D24P1.main
   D24P2.main
-  D25P1.main
+  --D25P1.main
+  putStrLn "TODO - Day25: Part1: dummy -> (0, 0)"
