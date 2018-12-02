@@ -9,7 +9,7 @@ do
   do
     export PART=${p}
     if [ "${DAY}" = "05" ] && [ "${PART}" = "2" ]; then echo "TODO - Day05: Part2: dummy -> (0, 0)" && continue; fi
-    ./bin/run.sh
+    ./bin/run.sh 2>&1
   done
 done
 
@@ -26,6 +26,6 @@ do
     if [ "${DAY}" = "22" ] && [ "${PART}" = "2" ]; then echo "TODO - Day22: Part2: dummy -> (0, 0)" && continue; fi
     if [ "${DAY}" = "25" ] && [ "${PART}" = "1" ]; then echo "TODO - Day25: Part1: dummy -> (0, 0)" && continue; fi
     if [ "${DAY}" = "25" ] && [ "${PART}" = "2" ]; then continue; fi
-    ./bin/run.sh
+    ./bin/run.sh 2>&1
   done
 done
