@@ -15,4 +15,4 @@ solve maze = steps where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day19: Part2: steps -> (%f, %d)\n" time result
+  printf "Day19: Part2: steps -> (%d, %f)\n" result time

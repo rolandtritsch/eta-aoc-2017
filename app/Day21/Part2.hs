@@ -14,4 +14,4 @@ solve rs = countPixel $ runSimulation rs 18 startGrid
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day21: Part2: after18 -> (%f, %d)\n" time result
+  printf "Day21: Part2: after18 -> (%d, %f)\n" result time

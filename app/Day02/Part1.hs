@@ -20,4 +20,4 @@ solve rows = sum $ checksums rows
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day02: Part1: checksum -> (%f, %d)\n" time result
+  printf "Day02: Part1: checksum -> (%d, %f)\n" result time

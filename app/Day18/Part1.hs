@@ -14,4 +14,4 @@ solve program = (run initialState . instructions) program
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day18: Part1: frequency -> (%f, %d)\n" time result
+  printf "Day18: Part1: frequency -> (%d, %f)\n" result time

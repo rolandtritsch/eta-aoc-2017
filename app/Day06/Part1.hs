@@ -15,4 +15,4 @@ solve banks = lambda + mu where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day06: Part1: cycles -> (%f, %d)\n" time result
+  printf "Day06: Part1: cycles -> (%d, %f)\n" result time

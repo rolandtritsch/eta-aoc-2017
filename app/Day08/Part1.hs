@@ -16,4 +16,4 @@ solve instructions = maximum $ M.elems $ foldl exec M.empty instructions
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day08: Part1: maxregister -> (%f, %d)\n" time result
+  printf "Day08: Part1: maxregister -> (%d, %f)\n" result time

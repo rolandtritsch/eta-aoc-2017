@@ -15,4 +15,4 @@ solve moves = distance centerTile finalTile where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day11: Part1: steps -> (%f, %d)\n" time result
+  printf "Day11: Part1: steps -> (%d, %f)\n" result time

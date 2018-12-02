@@ -19,4 +19,4 @@ solve events = getChars $ unsafePerformIO $ foldM processEvent (InGroup 0 (Stats
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day09: Part2: chars -> (%f, %d)\n" time result
+  printf "Day09: Part2: chars -> (%d, %f)\n" result time

@@ -27,4 +27,4 @@ solve cs = snd $ longestStrongest where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day24: Part2: longest -> (%f, %d)\n" time result
+  printf "Day24: Part2: longest -> (%d, %f)\n" result time

@@ -18,4 +18,4 @@ solve instructions = fst $ foldl findMax (0, M.empty) instructions where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day08: Part2: maxregisters -> (%f, %d)\n" time result
+  printf "Day08: Part2: maxregisters -> (%d, %f)\n" result time

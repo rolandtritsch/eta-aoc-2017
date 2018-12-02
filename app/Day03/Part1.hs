@@ -25,4 +25,4 @@ solve target = distance $ (cells moves) !! (target - 1)
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day03: Part1: distance -> (%f, %d)\n" time result
+  printf "Day03: Part1: distance -> (%d, %f)\n" result time

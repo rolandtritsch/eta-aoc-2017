@@ -14,4 +14,4 @@ solve key = (length . filter id . concat . buildGrid) key
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day14: Part1: used -> (%f, %d)\n" time result
+  printf "Day14: Part1: used -> (%d, %f)\n" result time

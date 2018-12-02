@@ -32,4 +32,4 @@ solve' events = getScore $ unsafePerformIO $ foldM (withLogging processEvent) (I
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day09: Part1: score -> (%f, %d)\n" time result
+  printf "Day09: Part1: score -> (%d, %f)\n" result time

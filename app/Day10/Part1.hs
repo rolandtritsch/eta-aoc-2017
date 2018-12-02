@@ -14,4 +14,4 @@ solve input' = foldl (*) 1 $ take 2 $ hash $ knot (input2Lengths input') seed
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day10: Part1: knot -> (%f, %d)\n" time result
+  printf "Day10: Part1: knot -> (%d, %f)\n" result time

@@ -14,4 +14,4 @@ solve layers = snd $ calcSecScore 0 $ buildFirewall layers
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day13: Part1: score -> (%f, %d)\n" time result
+  printf "Day13: Part1: score -> (%d, %f)\n" result time

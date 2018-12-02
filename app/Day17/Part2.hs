@@ -20,4 +20,4 @@ solve steps = value where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day17: Part2: zero -> (%f, %d)\n" time result
+  printf "Day17: Part2: zero -> (%d, %f)\n" result time

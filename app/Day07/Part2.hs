@@ -14,4 +14,4 @@ solve nodes = correctWeight $ findBadNode $ build nodes $ findRoot nodes
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day07: Part2: correctweight -> (%f, %d)\n" time result
+  printf "Day07: Part2: correctweight -> (%d, %f)\n" result time

@@ -14,4 +14,4 @@ solve input' = dense2hex $ sparse2dense $ hash $ knots (encode input') rounds
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day10: Part2: hash -> (%f, %s)\n" time result
+  printf "Day10: Part2: hash -> (%s, %f)\n" result time

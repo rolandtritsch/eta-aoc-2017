@@ -1,6 +1,5 @@
 module Day03.Part2 where
 
-import Data.Map (Map)
 import qualified Data.Map as M
 
 import Data.List (find)
@@ -13,7 +12,7 @@ import Control.Exception.Base (evaluate)
 import Day03
 
 -- | calculate the next value based on the current position
-nextValue :: Position -> Map Position Int -> Int
+nextValue :: Position -> M.Map Position Int -> Int
 nextValue (x, y) lm = foldl (\v p -> v + M.findWithDefault 0 p lm) 0 ps where
   ps = [
     (x+1, y),   (x-1, y),
@@ -41,4 +40,4 @@ solve target = value $ fromJust $ find (\(Cell v _) -> v > target) $ (cells move
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day03: Part2: number -> (%f, %d)\n" time result
+  printf "Day03: Part2: number -> (%d, %f)\n" result time

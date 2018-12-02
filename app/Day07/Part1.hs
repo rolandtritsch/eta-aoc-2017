@@ -14,4 +14,4 @@ solve nodes = findRoot nodes
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day07: Part1: findroot -> (%f, %s)\n" time result
+  printf "Day07: Part1: findroot -> (%s, %f)\n" result time

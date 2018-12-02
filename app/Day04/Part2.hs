@@ -21,4 +21,4 @@ solve phrases = countValid isValid $ sortCharsInWords $ phrases
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day04: Part2: countvalid -> (%f, %d)\n" time result
+  printf "Day04: Part2: countvalid -> (%d, %f)\n" result time

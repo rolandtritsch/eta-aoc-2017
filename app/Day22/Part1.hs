@@ -22,4 +22,4 @@ solve grid = numberOfNodesThatGotInfected where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day22: Part1: simple -> (%f, %d)\n" time result
+  printf "Day22: Part1: simple -> (%d, %f)\n" result time

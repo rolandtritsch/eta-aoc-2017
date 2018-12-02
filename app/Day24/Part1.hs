@@ -15,4 +15,4 @@ solve cs = maximum $ map sum bs where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day24: Part1: strongest -> (%f, %d)\n" time result
+  printf "Day24: Part1: strongest -> (%d, %f)\n" result time

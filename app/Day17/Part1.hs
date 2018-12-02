@@ -15,4 +15,4 @@ solve steps = buffer !! mod (position + 1) (length buffer)  where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day17: Part1: next -> (%f, %d)\n" time result
+  printf "Day17: Part1: next -> (%d, %f)\n" result time

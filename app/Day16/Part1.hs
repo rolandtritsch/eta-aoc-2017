@@ -14,4 +14,4 @@ solve programs = runProgram programs initialProgram
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day16: Part1: moves -> (%f, %s)\n" time result
+  printf "Day16: Part1: moves -> (%s, %f)\n" result time

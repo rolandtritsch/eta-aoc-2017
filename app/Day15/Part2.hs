@@ -18,4 +18,4 @@ solve = length $ filter (\(a, b) -> matching a b) $ take depth $ pairs where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate solve
-  printf "Day15: Part2: count -> (%f, %d)\n" time result
+  printf "Day15: Part2: count -> (%d, %f)\n" result time

@@ -14,4 +14,4 @@ solve pipes = length $ findPrograms 0 pipes
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day12: Part1: programs -> (%f, %d)\n" time result
+  printf "Day12: Part1: programs -> (%d, %f)\n" result time

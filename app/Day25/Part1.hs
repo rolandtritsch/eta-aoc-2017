@@ -18,4 +18,4 @@ solve steps = checksum where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day25: Part1: run -> (%f, %d)\n" time result
+  printf "Day25: Part1: run -> (%d, %f)\n" result time

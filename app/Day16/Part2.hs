@@ -22,4 +22,4 @@ findLoop programs inital current times
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day16: Part2: dance -> (%f, %s)\n" time result
+  printf "Day16: Part2: dance -> (%s, %f)\n" result time

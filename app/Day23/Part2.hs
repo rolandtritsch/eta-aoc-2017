@@ -21,4 +21,4 @@ solve _ = length $ filter (not . isPrime) [first, second..end] where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day23: Part2: run -> (%f, %d)\n" time result
+  printf "Day23: Part2: run -> (%d, %f)\n" result time

@@ -15,4 +15,4 @@ solve phrases = countValid isValid phrases
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day04: Part1: countvalid -> (%f, %d)\n" time result
+  printf "Day04: Part1: countvalid -> (%d, %f)\n" result time

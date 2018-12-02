@@ -30,4 +30,4 @@ solve ps = findClosest atEndOfSimlation where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day20: Part1: findclosest -> (%f, %d)\n" time result
+  printf "Day20: Part1: findclosest -> (%d, %f)\n" result time

@@ -14,4 +14,4 @@ solve pipes = length $ findGroups pipes
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day12: Part2: groups -> (%f, %d)\n" time result
+  printf "Day12: Part2: groups -> (%d, %f)\n" result time

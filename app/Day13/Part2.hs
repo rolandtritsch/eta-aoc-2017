@@ -19,4 +19,4 @@ solve layers = go 0 (buildFirewall layers) where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day13: Part2: pass -> (%f, %d)\n" time result
+  printf "Day13: Part2: pass -> (%d, %f)\n" result time

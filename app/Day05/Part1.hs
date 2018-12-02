@@ -18,4 +18,4 @@ solve stack = jump stack 0 offset 0
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day05: Part1: countsteps -> (%f, %d)\n" time result
+  printf "Day05: Part1: countsteps -> (%d, %f)\n" result time

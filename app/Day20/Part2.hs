@@ -22,4 +22,4 @@ solve ps = toInteger $ length atEndOfSimlation where
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "Day20: Part2: nocollisions -> (%f, %d)\n" time result
+  printf "Day20: Part2: nocollisions -> (%d, %f)\n" result time

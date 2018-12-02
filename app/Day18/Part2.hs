@@ -13,4 +13,4 @@ solve _ = 7112
 main :: IO ()
 main = do
   (time, result) <- timeItT $ evaluate (solve input)
-  printf "TODO - Day18: Part2: deadlock -> (%f, %d)\n" time result
+  printf "TODO - Day18: Part2: deadlock -> (%d, %f)\n" result time
