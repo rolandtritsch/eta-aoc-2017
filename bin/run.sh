@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ETA_JAVA_ARGS="-Xss1024M -Xmx4096M"
+export ETA_JAVA_ARGS="-Xss1024M -Xmx4096M"
 eta_version=$(etlas exec eta -- --version | cut -d, -f2 | cut -d\  -f3 | sed s/b/./g)
 
 if [ "${TYPE}" = "EXE" ]
